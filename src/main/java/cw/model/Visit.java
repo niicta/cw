@@ -4,6 +4,7 @@ import java.util.Calendar;
 
 public interface Visit {
     int getId();
+    void setId(int id);
     Order getOrder();
     Calendar getStartDate();
     void setStartDate(Calendar startDate);

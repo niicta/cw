@@ -23,9 +23,25 @@ public class GenericVisit implements Visit {
         this.fixed = fixed;
     }
 
+    public GenericVisit(Order order, Calendar startDate, Calendar endDate, Space space, boolean fixed){
+        this.order = order;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.space = space;
+        this.fixed = fixed;
+    }
+
+    public GenericVisit(){
+    }
+
     @Override
     public int getId() {
         return id;
+    }
+
+    @Override
+    public void setId(int id){
+        this.id = id;
     }
 
     @Override

@@ -18,9 +18,24 @@ public class GenericUser implements User {
         this.email = email;
     }
 
+    public GenericUser(UserRole userRole, String name, String phone, String email){
+        this.userRole = userRole;
+        this.name = name;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public GenericUser(){
+    }
+
     @Override
     public int getId() {
         return id;
+    }
+
+    @Override
+    public void setId(int id){
+        this.id = id;
     }
 
     @Override

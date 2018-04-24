@@ -20,14 +20,33 @@ public class GenericOrder implements Order {
         this.template = template;
     }
 
+    public GenericOrder(User user, Collection<Visit> visits, Template template){
+        this.user = user;
+        this.visits = visits;
+        this.template = template;
+    }
+
+    public GenericOrder(){
+    }
+
     @Override
     public int getId() {
         return id;
     }
 
     @Override
+    public void setId(int id){
+        this.id = id;
+    }
+
+    @Override
     public User getUser() {
         return user;
+    }
+
+    @Override
+    public void setUser(User user){
+        this.user = user;
     }
 
     @Override

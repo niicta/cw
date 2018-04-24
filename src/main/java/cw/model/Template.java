@@ -3,6 +3,7 @@ package cw.model;
 public interface Template
 {
     int getId();
+    void setId(int id);
     SpaceType getSpaceType();
     void setSpaceType(SpaceType spaceType);
     boolean isFixed();

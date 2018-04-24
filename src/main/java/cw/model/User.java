@@ -3,6 +3,7 @@ package cw.model;
 public interface User
 {
     int getId();
+    void setId(int id);
     UserRole getUserRole();
     void setUserRole(UserRole userRole);
     String getName();

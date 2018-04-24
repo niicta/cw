@@ -22,9 +22,26 @@ public class GenericTemplate implements Template{
         this.name = name;
     }
 
+    public GenericTemplate(SpaceType spaceType, boolean fixed, boolean fullWeek, int countOfPlaces, double basePricePerHour, String name){
+        this.spaceType = spaceType;
+        this.fixed = fixed;
+        this.fullWeek = fullWeek;
+        this.countOfPlaces = countOfPlaces;
+        this.basePricePerHour = basePricePerHour;
+        this.name = name;
+    }
+
+    public GenericTemplate(){
+    }
+
     @Override
     public int getId() {
         return id;
+    }
+
+    @Override
+    public void setId(int id){
+        this.id = id;
     }
 
     @Override
