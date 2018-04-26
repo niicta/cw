@@ -4,9 +4,16 @@ import cw.model.Order;
 import cw.model.Space;
 import cw.model.Visit;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Calendar;
 
+@Entity
 public class GenericVisit implements Visit {
+
+    @Id
+    @GeneratedValue
     private int id;
     private Order order;
     private Calendar startDate;

@@ -5,9 +5,15 @@ import cw.model.Template;
 import cw.model.User;
 import cw.model.Visit;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Collection;
 
+@Entity
 public class GenericOrder implements Order {
+    @Id
+    @GeneratedValue
     private int id;
     private User user;
     private Collection<Visit> visits;

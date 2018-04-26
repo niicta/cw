@@ -3,7 +3,15 @@ package cw.model.impl.generic;
 import cw.model.User;
 import cw.model.UserRole;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class GenericUser implements User {
+
+    @Id
+    @GeneratedValue
     private int id;
     private UserRole userRole;
     private String name;

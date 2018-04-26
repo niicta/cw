@@ -3,7 +3,15 @@ package cw.model.impl.generic;
 import cw.model.Space;
 import cw.model.SpaceType;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class GenericSpace implements Space{
+
+    @Id
+    @GeneratedValue
     private int id;
     private SpaceType spaceType;
     private int countOfSeats;

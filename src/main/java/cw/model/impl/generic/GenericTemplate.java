@@ -3,7 +3,15 @@ package cw.model.impl.generic;
 import cw.model.SpaceType;
 import cw.model.Template;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class GenericTemplate implements Template{
+
+    @Id
+    @GeneratedValue
     private int id;
     private SpaceType spaceType;
     private boolean fixed;
