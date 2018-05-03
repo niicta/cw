@@ -3,11 +3,11 @@ package cw.model.impl.generic;
 import cw.model.User;
 import cw.model.UserRole;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name = "GenericUser.findAll", query = "SELECT u FROM GenericUser u")
+@Table(name = "USERS")
 public class GenericUser implements User {
 
     @Id

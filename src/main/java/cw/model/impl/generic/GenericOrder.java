@@ -10,9 +10,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@NamedQueries({
-        @NamedQuery(name = "findAll", query = "select o from GenericOrder o")
-})
+@NamedQuery(name = "GenericOrder.findAll", query = "SELECT o FROM GenericOrder o")
 @Table(name = "ORDERS")
 public class GenericOrder implements Order {
     @Id

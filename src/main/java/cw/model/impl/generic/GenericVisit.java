@@ -4,12 +4,12 @@ import cw.model.Order;
 import cw.model.Space;
 import cw.model.Visit;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Calendar;
 
 @Entity
+@NamedQuery(name = "GenericVisit.findAll", query = "SELECT v FROM GenericVisit v")
+@Table(name = "VISITS")
 public class GenericVisit implements Visit {
 
     @Id

@@ -3,11 +3,11 @@ package cw.model.impl.generic;
 import cw.model.SpaceType;
 import cw.model.Template;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@NamedQuery(name = "GenericTemplate.findAll", query = "SELECT t FROM GenericTemplate t")
+@Table(name = "TEMPLATES")
 public class GenericTemplate implements Template{
 
     @Id

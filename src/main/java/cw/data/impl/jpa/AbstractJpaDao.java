@@ -1,13 +1,9 @@
 package cw.data.impl.jpa;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 import cw.data.DAO;
 
 import javax.annotation.PreDestroy;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
-import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnit;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -20,9 +16,7 @@ public abstract class AbstractJpaDao<T> implements DAO<T>
     public abstract T findById(int id);
 
     @Override
-    public Collection<T> findAll(){
-        return entityManager.findxa;
-    }
+    public abstract Collection<T> findAll();
 
     @Override
     public void save(T t){
