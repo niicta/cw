@@ -5,12 +5,15 @@ import cw.model.Template;
 import cw.model.User;
 import cw.model.Visit;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.inject.Named;
+import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "findAll", query = "select o from GenericOrder o")
+})
+@Table(name = "ORDERS")
 public class GenericOrder implements Order {
     @Id
     @GeneratedValue
