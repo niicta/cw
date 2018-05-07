@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Collection;
 
-@Entity
+
 public interface Order {
     int getId();
     void setId(int id);

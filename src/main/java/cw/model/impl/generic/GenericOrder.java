@@ -7,27 +7,32 @@ import cw.model.Visit;
 
 import javax.inject.Named;
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Entity
 @NamedQuery(name = "GenericOrder.findAll", query = "SELECT o FROM GenericOrder o")
-@Table(name = "ORDERS")
+
 public class GenericOrder implements Order {
     @Id
     @GeneratedValue
     private int id;
-    private User user;
-    private Collection<Visit> visits;
-    private Template template;
+    @ManyToOne
+    private GenericUser user;
+    @OneToMany
+    private Collection<GenericVisit> visits;
+    @OneToOne
+    private GenericTemplate template;
 
-    public GenericOrder(int id, User user, Collection<Visit> visits, Template template) {
+    public GenericOrder(int id, GenericUser user, Collection<GenericVisit> visits, GenericTemplate template) {
         this.id = id;
         this.user = user;
         this.visits = visits;
         this.template = template;
     }
 
-    public GenericOrder(User user, Collection<Visit> visits, Template template){
+    public GenericOrder(GenericUser user, Collection<GenericVisit> visits, GenericTemplate template){
         this.user = user;
         this.visits = visits;
         this.template = template;
@@ -53,17 +58,24 @@ public class GenericOrder implements Order {
 
     @Override
     public void setUser(User user){
-        this.user = user;
+        this.user = (GenericUser)user;
     }
 
     @Override
     public Collection<Visit> getVisits() {
-        return visits;
+        Collection<Visit> visitsToReturn = new ArrayList<Visit>();
+        visitsToReturn.addAll(this.visits);
+        return visitsToReturn;
     }
 
     @Override
     public void setVisits(Collection<Visit> visits) {
-        this.visits = visits;
+        List<GenericVisit> visitsToSet = new ArrayList<GenericVisit>();
+        ArrayList<Visit> incomingVisits = new ArrayList<>(visits);
+        for (int i = 0; i < incomingVisits.size(); i++){
+            visitsToSet.set(i, (GenericVisit) incomingVisits.get(i));
+        }
+        this.visits = visitsToSet;
     }
 
     @Override
@@ -73,6 +85,6 @@ public class GenericOrder implements Order {
 
     @Override
     public void setTemplate(Template template) {
-        this.template = template;
+        this.template = (GenericTemplate) template;
     }
 }

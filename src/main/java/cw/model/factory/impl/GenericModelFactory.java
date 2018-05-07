@@ -4,6 +4,7 @@ import cw.model.*;
 import cw.model.factory.ModelFactory;
 import cw.model.impl.generic.*;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
 import javax.ejb.*;
@@ -13,7 +14,11 @@ public class GenericModelFactory implements ModelFactory
 {
     @Override
     public Order createOrder(User user, Collection<Visit> visits, Template template){
-        return new GenericOrder(user, visits, template);
+        Collection<GenericVisit> genericVisits = new ArrayList<GenericVisit>();
+        for (Visit visit : visits){
+            genericVisits.add((GenericVisit)visit);
+        }
+        return new GenericOrder((GenericUser)user, genericVisits, (GenericTemplate) template);
     }
 
     @Override
@@ -33,6 +38,6 @@ public class GenericModelFactory implements ModelFactory
 
     @Override
     public Visit createVisit(Order order, Calendar startDate, Calendar endDate, Space space, boolean fixed){
-        return new GenericVisit(order, startDate, endDate, space, fixed);
+        return new GenericVisit((GenericOrder) order, startDate, endDate, (GenericSpace) space, fixed);
     }
 }

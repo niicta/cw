@@ -9,19 +9,20 @@ import java.util.Calendar;
 
 @Entity
 @NamedQuery(name = "GenericVisit.findAll", query = "SELECT v FROM GenericVisit v")
-@Table(name = "VISITS")
 public class GenericVisit implements Visit {
 
     @Id
     @GeneratedValue
     private int id;
-    private Order order;
+    @ManyToOne
+    private GenericOrder order;
     private Calendar startDate;
     private Calendar endDate;
-    private Space space;
+    @ManyToOne
+    private GenericSpace space;
     private boolean fixed;
 
-    public GenericVisit(int id, Order order, Calendar startDate, Calendar endDate, Space space, boolean fixed) {
+    public GenericVisit(int id, GenericOrder order, Calendar startDate, Calendar endDate, GenericSpace space, boolean fixed) {
         this.id = id;
         this.order = order;
         this.startDate = startDate;
@@ -30,7 +31,7 @@ public class GenericVisit implements Visit {
         this.fixed = fixed;
     }
 
-    public GenericVisit(Order order, Calendar startDate, Calendar endDate, Space space, boolean fixed){
+    public GenericVisit(GenericOrder order, Calendar startDate, Calendar endDate, GenericSpace space, boolean fixed){
         this.order = order;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -57,7 +58,7 @@ public class GenericVisit implements Visit {
     }
 
     public void setOrder(Order order) {
-        this.order = order;
+        this.order = (GenericOrder)order;
     }
 
     @Override
@@ -87,7 +88,7 @@ public class GenericVisit implements Visit {
 
     @Override
     public void setSpace(Space space) {
-        this.space = space;
+        this.space = (GenericSpace)space;
     }
 
     @Override

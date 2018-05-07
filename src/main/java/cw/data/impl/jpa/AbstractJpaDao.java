@@ -1,14 +1,31 @@
 package cw.data.impl.jpa;
 
 import cw.data.DAO;
+import cw.data.impl.jpa.impl.generic.GenericUserJpaDao;
+import org.apache.log4j.Logger;
 
 import javax.annotation.PreDestroy;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionManagement;
+import javax.ejb.TransactionManagementType;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Locale;
 
+import static javax.ejb.TransactionAttributeType.MANDATORY;
+import static javax.ejb.TransactionAttributeType.REQUIRED;
+
+@TransactionManagement(value= TransactionManagementType.BEAN)
+@TransactionAttribute(value=MANDATORY)
 public abstract class AbstractJpaDao<T> implements DAO<T>
 {
+    private static final Logger LOG = Logger.getLogger(AbstractJpaDao.class);
+    static{
+        Locale.setDefault(Locale.ENGLISH);
+    }
+
     @PersistenceContext(unitName = "cwPU")
     protected EntityManager entityManager;
 
@@ -20,18 +37,13 @@ public abstract class AbstractJpaDao<T> implements DAO<T>
 
     @Override
     public void save(T t){
-        EntityTransaction entityTransaction = entityManager.getTransaction();
-        entityTransaction.begin();
+        LOG.debug("saving " + t);
         entityManager.persist(t);
-        entityTransaction.commit();
     }
 
     @Override
     public void update(T t){
-        EntityTransaction entityTransaction = entityManager.getTransaction();
-        entityTransaction.begin();
         entityManager.refresh(t);
-        entityTransaction.commit();
     }
 
     @Override
@@ -41,16 +53,9 @@ public abstract class AbstractJpaDao<T> implements DAO<T>
 
     @Override
     public void delete(Collection<T> collection){
-        EntityTransaction entityTransaction = entityManager.getTransaction();
-        entityTransaction.begin();
         for (T t : collection){
             entityManager.remove(t);
         }
-        entityTransaction.commit();
     }
 
-    @PreDestroy
-    private void closeEntityManager(){
-        entityManager.close();
-    }
 }

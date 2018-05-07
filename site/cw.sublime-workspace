@@ -1,0 +1,780 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"more",
+				"more-videos-button\t(index.html)"
+			],
+			[
+				"articleCo",
+				"article-content-block\t(index.html)"
+			],
+			[
+				"in",
+				"insertArticles"
+			],
+			[
+				"se",
+				"sendAjaxRequestWithOldJs"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"X",
+				"XMLHttpRequest"
+			],
+			[
+				"w",
+				"window"
+			],
+			[
+				"b",
+				"border"
+			],
+			[
+				"menu-li",
+				"menu-list-mobile\t(index.html)"
+			],
+			[
+				"menu",
+				"menu-bar\t(index.html)"
+			],
+			[
+				"menu-bar-mobile-t",
+				"menu-bar-mobile-trigger\t(index.html)"
+			],
+			[
+				"men",
+				"menu-bar-mobile\t(index.html)"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"me",
+				"menu-bar-mobile-trigger\t(index.html)"
+			],
+			[
+				"nik",
+				"nikr-flex-column"
+			],
+			[
+				"tr",
+				"trigger-row\t(index.html)"
+			],
+			[
+				"fle",
+				"flex"
+			],
+			[
+				"menu-",
+				"menu-bar-mobile"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"medi",
+				"@media\t@media ${1:screen} {\n\t${0}\n}"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"scroll",
+				"scroll"
+			],
+			[
+				"wa",
+				"w-a\twidth: auto;"
+			],
+			[
+				"ma",
+				"main-content\t(index.html)"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"sc",
+				"scroll-to-top-container\t(index.html)"
+			],
+			[
+				"he",
+				"height\t(main.css)"
+			],
+			[
+				"text",
+				"text\t(index.html)"
+			],
+			[
+				"scr",
+				"scroll-to-top-text\t(index.html)"
+			],
+			[
+				"ex",
+				"executeScrollPositionCondition"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"f",
+				"fixed"
+			],
+			[
+				"check",
+				"checkPassLogin"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"sin",
+				"sing-in-button"
+			],
+			[
+				"s",
+				"sing-in-login\t(index.html)"
+			],
+			[
+				"pop",
+				"popups\t(scripts.js)"
+			],
+			[
+				"si",
+				"sing-up-popup-form"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"lo",
+				"login-field\t(index.html)"
+			],
+			[
+				"dis",
+				"display\t(main.css)"
+			],
+			[
+				"sh",
+				"showSingInPopUp"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"p",
+				"pointer"
+			],
+			[
+				"bc",
+				"border-color"
+			],
+			[
+				"fb",
+				"fxb\tflex-basis"
+			],
+			[
+				"popup-t",
+				"popup-title-text\t(index.html)"
+			],
+			[
+				"bra",
+				"border-radius"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"ni",
+				"nikr-flex-column"
+			],
+			[
+				"sing",
+				"sing-in-popup-form\t(index.html)"
+			],
+			[
+				"t",
+				"top"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"ad",
+				"additional-reference\t(article1.html)"
+			],
+			[
+				"articlec",
+				"article-content-text"
+			],
+			[
+				"art",
+				"article-image"
+			],
+			[
+				"i",
+				"images"
+			],
+			[
+				"wor",
+				"word-spacing"
+			],
+			[
+				"article-co",
+				"article-content"
+			],
+			[
+				"additional-co",
+				"additional-content"
+			],
+			[
+				"ass",
+				"as-s\talign-self: stretch;"
+			],
+			[
+				"article-",
+				"article-content\t(article1.html)"
+			],
+			[
+				"nikr",
+				"nikr-flex-column"
+			],
+			[
+				"article-con",
+				"article-content-block"
+			],
+			[
+				"ar",
+				"articles-content-row\t(articles.html)"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"cp",
+				"cur-p\tcursor: pointer;"
+			],
+			[
+				"rel",
+				"relative"
+			],
+			[
+				"fons",
+				"font-size"
+			],
+			[
+				"fo-s",
+				"font-size"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"tsz",
+				"font-size"
+			],
+			[
+				"tecol",
+				"text-decoration-color"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bcgc",
+				"background-color"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"vide",
+				"video-container"
+			],
+			[
+				"pr",
+				"pos-r\tposition: relative;"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"vide-p",
+				"video-preview-img\t(index.html)"
+			],
+			[
+				"v",
+				"video-container"
+			],
+			[
+				"vi",
+				"video-summary\t(index.html)"
+			],
+			[
+				"video",
+				"video-preview\t(index.html)"
+			],
+			[
+				"article-c",
+				"article-container\t(index.html)"
+			],
+			[
+				"vid",
+				"video-content\t(index.html)"
+			],
+			[
+				"video-content",
+				"video-content-block\t(index.html)"
+			],
+			[
+				"bor",
+				"border-box"
+			],
+			[
+				"menu-element-c",
+				"menu-element-container\t(index.html)"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"inline-b",
+				"inline-block"
+			],
+			[
+				"ai",
+				"ai-s\talign-items: stretch;"
+			],
+			[
+				"flex",
+				"flex-start"
+			],
+			[
+				"ais",
+				"ai-fs\talign-items: flex-start;"
+			],
+			[
+				"nikr-fle",
+				"nikr-flex-column\t(index.html)"
+			],
+			[
+				"mark",
+				"markup.css"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"m",
+				"marker-start"
+			],
+			[
+				"aes",
+				"align-self"
+			],
+			[
+				"ase",
+				"as-fe\talign-self: flex-end;"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"borders",
+				"border-spacing"
+			],
+			[
+				"brc",
+				"border-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 407.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pck",
+				"Install Package Control"
+			]
+		],
+		"width": 592.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/edu/7сем/тси/firstsite/site/site/css/fonts.css",
+		"/D/edu/7сем/тси/firstsite/site/site/css/theme.css",
+		"/D/edu/7сем/тси/firstsite/site/site/css/markup.css",
+		"/D/edu/7сем/тси/firstsite/site/site/css/main.css",
+		"/D/edu/7сем/тси/firstsite/site/site/index.html",
+		"/D/edu/7сем/тси/firstsite/site/site/content/articles/article3.html",
+		"/D/edu/7сем/тси/firstsite/site/site/content/articles/article2.html",
+		"/D/edu/7сем/тси/firstsite/site/site/content/articles/article1.html",
+		"/D/edu/7сем/тси/firstsite/site/site/content/articles/articles.html",
+		"/D/edu/8сем/псп/HiEng/HiEng/script/scripts.js",
+		"/D/edu/7сем/тси/firstsite/site/site/content/videos/video3.html",
+		"/D/edu/7сем/тси/firstsite/site/site/content/videos/video1.html",
+		"/D/edu/7сем/тси/firstsite/site/site/content/videos/video2.html",
+		"/D/edu/7сем/тси/firstsite/site/site/script/scripts.js",
+		"/D/edu/7сем/тси/site/site/style.css",
+		"/D/Downloads/Code/bootstrap-4.0.0-beta-dist/js/bootstrap.js",
+		"/D/Downloads/Code/bootstrap-4.0.0-beta-dist/css/bootstrap.css"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 335.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"butt",
+			"comment",
+			"commen",
+			"butt",
+			"scrol",
+			"createXMLHttp",
+			"sendAjaxRequestWithOldJs",
+			"addMoreArticles",
+			"showSingUpPopUp",
+			"sing",
+			"in",
+			"show",
+			"show'",
+			"loadSingForms",
+			"load",
+			"hidePopUps",
+			"showSingInPopUp",
+			"article",
+			"acticle",
+			"article",
+			"trig",
+			"tri",
+			"tr",
+			"tri",
+			"trig",
+			"trigg",
+			"tri",
+			"button",
+			"menu-bar-mobile-trigger",
+			"header",
+			"executeScrollPositionCondition",
+			"mobile",
+			"absol",
+			"20px",
+			"mobile",
+			"executeScrollPositionCondition",
+			".new-videos-header",
+			".new-videos-header:before",
+			"videos",
+			"new-videos-header",
+			"height",
+			"#style-1",
+			"executeScrollPositionCondition",
+			"menu-l",
+			"$('.menu-bar')",
+			"entire-page",
+			".main-content",
+			"hover",
+			"sing",
+			"password",
+			"login_field",
+			"leng",
+			"login",
+			"sing-in",
+			"in",
+			"login-field)",
+			"-",
+			"%\n",
+			"login",
+			"header",
+			"Lorem ipsum dolor.",
+			"footer",
+			"article-name",
+			"<li",
+			":",
+			"reference",
+			"strong",
+			".article-content",
+			".article-content{",
+			".article-content{\n",
+			"article",
+			"article-name",
+			");\t",
+			"headere",
+			"article-name",
+			"<h1",
+			"h1",
+			"images",
+			"article-container",
+			"container",
+			"article",
+			"artcile",
+			"article-name",
+			"h3",
+			"h2",
+			"summary",
+			"column",
+			"button",
+			"butto",
+			".video-summary .video-name",
+			"h3",
+			"h2",
+			"text",
+			"video",
+			"line-h",
+			"tex",
+			"line",
+			"h3",
+			"a",
+			"element",
+			"content",
+			"content.nikr-flex-column",
+			"sing",
+			"\t-ms-align-items: center;\n\talign-items: center;",
+			"col-",
+			"col"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"login_field)",
+			"main-article",
+			"main-",
+			"h2",
+			"h1",
+			"sign"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "html",
+							"buffer_scroll_name": "06abbee9",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 141.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "cw.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

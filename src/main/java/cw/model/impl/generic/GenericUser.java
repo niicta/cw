@@ -7,11 +7,10 @@ import javax.persistence.*;
 
 @Entity
 @NamedQuery(name = "GenericUser.findAll", query = "SELECT u FROM GenericUser u")
-@Table(name = "USERS")
 public class GenericUser implements User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue()
     private int id;
     private UserRole userRole;
     private String name;

@@ -1,0 +1,36 @@
+.main-backgroung-image{
+	width: 100%;
+	transition: all 0.15s ease-in;
+}
+.main-backgroung{
+	background: #000;
+}
+.main-backgroung-image{
+	filter: opacity(45%);
+}
+.button{
+	border-radius: 	0px;
+	border: 0.01em solid rgba(160,160,160, 0.4);
+	background: transparent;
+	padding: 5px;
+	-ms-align-self: center;
+	align-self: center;
+	font-size: 1.2em;
+	color: rgb(160, 160, 160);
+	letter-spacing: 0.1em;
+	transition: all 0.3s ease-in;
+}
+.button:hover{
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	filter: opacity(70%);
+	/*color: #fff;*/
+	/*border: 2px solid rgba(160,160,160, 0.5);*/
+}
+.button p{
+	margin: 0;
+}
+.login-block *{
+	margin-top: 1.5%;
+}

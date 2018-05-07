@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @NamedQuery(name = "GenericSpace.findAll", query = "SELECT s FROM GenericSpace s")
-@Table(name = "SPACES")
+
 public class GenericSpace implements Space{
 
     @Id

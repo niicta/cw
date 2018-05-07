@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Calendar;
 
+
 public interface Visit {
     int getId();
     void setId(int id);

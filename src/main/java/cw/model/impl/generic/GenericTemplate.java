@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @NamedQuery(name = "GenericTemplate.findAll", query = "SELECT t FROM GenericTemplate t")
-@Table(name = "TEMPLATES")
+
 public class GenericTemplate implements Template{
 
     @Id
