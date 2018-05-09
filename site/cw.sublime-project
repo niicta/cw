@@ -2,10 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "images"
+			"path": "css"
 		},
 		{
-			"path": "css"
+			"path": "images"
 		}
 	]
 }

@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"m",
+				"main.jpg\t(index.html)"
+			],
+			[
+				"flex",
+				"flex-row"
+			],
+			[
+				"wel",
+				"welcome-form"
+			],
+			[
+				"we",
+				"welcome-text\t(index.html)"
+			],
+			[
+				"mih",
+				"min-height\tproperty"
+			],
+			[
+				"log",
+				"login-block\t(index.html)"
+			],
+			[
+				"c",
+				"cursor\tproperty"
+			],
+			[
+				"z",
+				"z-index\tproperty"
+			],
+			[
+				"lo",
+				"login-block\t(index.html)"
+			],
+			[
+				"fr",
+				"fxd-r\tflex-direction: row;"
+			],
+			[
+				"tra",
+				"transition\tproperty"
+			],
+			[
+				"a",
+				"anim-\tanimation: ${1:name} ${2:duration} ${3:timing-function} ${4:delay} ${5:iteration-count} ${6:direction} ${7:fill-mode};"
+			],
+			[
+				"ma",
+				"main-backgroung-image"
+			],
+			[
+				"w",
+				"width\tproperty"
+			],
+			[
 				"more",
 				"more-videos-button\t(index.html)"
 			],
@@ -26,10 +82,6 @@
 			[
 				"X",
 				"XMLHttpRequest"
-			],
-			[
-				"w",
-				"window"
 			],
 			[
 				"b",
@@ -84,20 +136,12 @@
 				"@media\t@media ${1:screen} {\n\t${0}\n}"
 			],
 			[
-				"z",
-				"z-index"
-			],
-			[
 				"scroll",
 				"scroll"
 			],
 			[
 				"wa",
 				"w-a\twidth: auto;"
-			],
-			[
-				"ma",
-				"main-content\t(index.html)"
 			],
 			[
 				"di",
@@ -158,10 +202,6 @@
 			[
 				"le",
 				"length"
-			],
-			[
-				"lo",
-				"login-field\t(index.html)"
 			],
 			[
 				"dis",
@@ -316,10 +356,6 @@
 				"background-color"
 			],
 			[
-				"tra",
-				"transition"
-			],
-			[
 				"pos",
 				"position"
 			],
@@ -388,10 +424,6 @@
 				"ai-s\talign-items: stretch;"
 			],
 			[
-				"flex",
-				"flex-start"
-			],
-			[
 				"ais",
 				"ai-fs\talign-items: flex-start;"
 			],
@@ -406,10 +438,6 @@
 			[
 				"border-r",
 				"border-right"
-			],
-			[
-				"m",
-				"marker-start"
 			],
 			[
 				"aes",
@@ -447,7 +475,41 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 765,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Коворкинг</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/markup.css\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/theme.css\">\n</head>\n<body>\n\t<div class=\"entire-page flex-column\">\n\t\t<div class=\"header flex-row\">\n\t\t\t<img class=\"header-image\" src=\"images/head.jpg\">\n\t\t</div>\n\t\t<div class=\"content flex-row\"></div>\n\t</div>\n\t<div class=\"menu flex-column\"></div>\n</body>\n</html>",
+			"file": "main.html",
+			"file_size": 488,
+			"file_write_time": 131703432385333378,
+			"settings":
+			{
+				"buffer_size": 462,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "body{\n\tpadding: 0;\n\tmargin: 0;\n\twidth: 100%;\n}\n.flex-column{\n\tdisplay: -webkit-flex;\n\tdisplay: -moz-flex;\n\tdisplay: -ms-flex;\n\tdisplay: -o-flex;\n\tdisplay: flex;\n\t-webkit-flex-direction: column;\n\t-moz-flex-direction: column;\n\t-ms-flex-direction: column;\n\t-o-flex-direction: column;\n\tflex-direction: column;\n}\n.flex-row{\n\tdisplay: -webkit-flex;\n\tdisplay: -moz-flex;\n\tdisplay: -ms-flex;\n\tdisplay: -o-flex;\n\tdisplay: flex;\n\t-webkit-flex-direction: row;\n\t-moz-flex-direction: row;\n\t-ms-flex-direction: row;\n\t-o-flex-direction: row;\n\tflex-direction: row;\n}\n.main-backgroung{\n\tposition: fixed;\n\twidth: 100%;\n\theight: auto;\n\ttop: 0;\n\tleft: 0;\n}\n.main-backgroung-image{\n\twidth: 100%;\n}\n.welcome-block{\n\tposition:relative;\n\tz-index: 10;\n\t-ms-align-items: center;\n\talign-items: center;\n\tjustify-content: center;\n\tmin-height: 100vh;\n}\n.welcome-form{\t\n\twidth: 30vw;\n  height: 30vh;\n  padding: 2% 0 2% 0;\n\t-ms-align-items: center;\n\talign-items: center;\n\tjustify-content: space-around;\n}\n.welcome-form .button{\n\twidth: 40%;\n}\n.welcome-text{\n\tmargin: 0;\n\tpadding: 0;\n}\n.button p{\n\ttext-align: center;\n}\n.welcome-text{\n\tcolor: rgba( 160, 160, 160, 1);\n}\n",
+			"file": "css/markup.css",
+			"file_size": 1205,
+			"file_write_time": 131703406331236875,
+			"settings":
+			{
+				"buffer_size": 1137,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/theme.css",
+			"settings":
+			{
+				"buffer_size": 727,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -494,8 +556,13 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/edu/димлом/site/images"
+	],
 	"file_history":
 	[
+		"/D/edu/димлом/Project/cw/site/images/head.jpg",
 		"/D/edu/7сем/тси/firstsite/site/site/css/fonts.css",
 		"/D/edu/7сем/тси/firstsite/site/site/css/theme.css",
 		"/D/edu/7сем/тси/firstsite/site/site/css/markup.css",
@@ -530,6 +597,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"160",
 			"butt",
 			"comment",
 			"commen",
@@ -659,7 +727,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -668,15 +736,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 765,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								89,
+								89
 							]
 						],
 						"settings":
@@ -689,7 +757,125 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								342
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "plain text",
+							"buffer_scroll_name": "46481f1b",
+							"spell_check": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "css/markup.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1137,
+								1137
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "css",
+							"buffer_scroll_name": "3872cb6d",
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 958.4,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/theme.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								645,
+								645
+							],
+							[
+								649,
+								649
+							],
+							[
+								653,
+								653
+							],
+							[
+								710,
+								710
+							],
+							[
+								714,
+								714
+							],
+							[
+								718,
+								718
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "plain text",
+							"buffer_scroll_name": "cf08f0b9",
+							"spell_check": false,
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -712,11 +898,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -769,7 +962,7 @@
 	{
 	},
 	"show_minimap": false,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 188.0,
