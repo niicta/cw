@@ -116,3 +116,12 @@ flex-grow: 1;
 	margin: 0px;
 	padding: 0px;
 }
+.menu-item-text{
+	color: #e7e5ff;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.menu-item-container{
+	padding: 10px 0;
+}
