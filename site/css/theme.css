@@ -34,14 +34,45 @@ body{
 .button p{
 	margin: 0;
 }
-.welcome-form{
+.welcome-form, .login-form{
 	background: rgba(10 ,10 ,10 , 0.4);
 	border-radius: 24px;
 	border: 1px solid rgba(10 ,10 ,10 , 0.4);
+	transition: all 0.5s ease-in-out;
+}
+
+.welcome-text, .login-text{
+	color: rgba( 160, 160, 160, 1);
+}
+.hidden{
+	display: none;
 }
 .header{
 	background: #6E84D6;
 }
 .header div p{
 	color: #e7e5ff
+}
+.menu-item-text{
+	color: #e7e5ff;
+}
+.menu-item-text:after{
+	background-color: #e7e5ff;
+}
+.menu-item-container:hover{
+	background-color: #6E84D6;
+}
+.menu{
+	background:  #5d5b81;
+}
+.menu-icon{
+	background:  #5d5b81;
+	color: #e7e5ff;
+	border: 1px solid #5d5b81	;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.template-container .button:hover{
+	background:  #f1edff;
+	border: 0.01em solid #f1edff	;
 }

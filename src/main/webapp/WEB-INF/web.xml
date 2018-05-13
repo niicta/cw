@@ -8,4 +8,40 @@
         <servlet-name>test</servlet-name>
         <url-pattern>/test</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>index</servlet-name>
+        <jsp-file>/site/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>index</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>main</servlet-name>
+        <jsp-file>/site/main.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>main</servlet-name>
+        <url-pattern>/main</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginJson</servlet-name>
+        <servlet-class>cw.servlets.json.LoginJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginJson</servlet-name>
+        <url-pattern>/loginJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userJson</servlet-name>
+        <servlet-class>cw.servlets.json.CurrentUserJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userJson</servlet-name>
+        <url-pattern>/userJson</url-pattern>
+    </servlet-mapping>
 </web-app>

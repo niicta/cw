@@ -32,8 +32,8 @@ public class GenericModelFactory implements ModelFactory
     }
 
     @Override
-    public User createUser(UserRole userRole, String name, String phone, String email){
-        return new GenericUser(userRole, name, phone, email);
+    public User createUser(UserRole userRole, String name, String phone, String email, String password){
+        return new GenericUser(userRole, name, phone, email, password);
     }
 
     @Override

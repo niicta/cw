@@ -7,7 +7,9 @@ import org.apache.log4j.Logger;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.enterprise.context.SessionScoped;
 import javax.persistence.TypedQuery;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 

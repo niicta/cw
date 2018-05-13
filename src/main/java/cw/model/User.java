@@ -1,5 +1,6 @@
 package cw.model;
 
+import javax.inject.Named;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,4 +18,6 @@ public interface User
     void setPhone(String phone);
     String getEmail();
     void setEmail(String email);
+    void setPassword(String password);
+    String getPassword();
 }

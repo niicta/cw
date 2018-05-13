@@ -3,6 +3,9 @@ body{
 	margin: 0;
 	width: 100%;
 }
+.button{
+	display: inline;
+}
 .flex-column{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -37,7 +40,7 @@ body{
 .main-backgroung-image{
 	width: 100%;
 }
-.welcome-block{
+.welcome-block, .login-block{
 	position:relative;
 	z-index: 10;
 	-ms-align-items: center;
@@ -45,16 +48,18 @@ body{
 	justify-content: center;
 	min-height: 100vh;
 }
-.welcome-form{	
+.welcome-form, .login-form{	
 	width: 30vw;
-  height: 30vh;
+  min-height: 30vh;
   padding: 2% 0 2% 0;
 	-ms-align-items: center;
 	align-items: center;
 	justify-content: space-around;
+	transition: all 0.2s ease-in-out;
 }
-.welcome-form .button{
+.welcome-form .button, .login-form .button{
 	width: 40%;
+	margin: 5px;
 }
 .welcome-text{
 	margin: 0;
@@ -63,10 +68,13 @@ body{
 .button p{
 	text-align: center;
 }
-.welcome-text{
-	color: rgba( 160, 160, 160, 1);
+.header-container{
+	position:relative;
+	width: 100%;
+	height: 50px;
 }
 .header{
+	position: fixed;
 	width: 100%;
 	height: 50px;
 	-ms-align-items: center;
@@ -82,21 +90,23 @@ flex-grow: 1;
 .content{
 	-ms-align-items: center;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	-webkit-flex-wrap: wrap;
 	-moz-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
 	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
 	margin: 0 10%;
-	height: 100px;
 }
 .template-container{
 	background: #fff;
-	border: 1px solid black;
+	border: 1px solid rgba(160,160,160, 0.3);
 	margin: 10px;
 	flex-basis: 300px;
-	height: 100px;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	padding: 1%;
 }
 .content p{
 	margin: 10px;
@@ -108,8 +118,16 @@ flex-grow: 1;
     left: 0;
     width: 195px;
     height: 100vh;
-    background:  #5d5b81;
-    margin-right: 2%;
+    margin-right: 40px;
+    left: -195px;
+    transition: all 0.3s ease-in-out;
+    box-sizing: 
+}
+.menu:hover{
+	left: 0;
+}
+.menu:hover .menu-icon{
+	opacity: 0;
 }
 .menu-list{
 	list-style: none;	
@@ -117,11 +135,47 @@ flex-grow: 1;
 	padding: 0px;
 }
 .menu-item-text{
-	color: #e7e5ff;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 }
 .menu-item-container{
 	padding: 10px 0;
+	transition: all 0.3s ease-in-out;
+	position: relative;
+	z-index: 100;
+}
+.menu-item-text:after{
+   display: block;
+   position: relative;
+   content: "";
+   height: 1px;
+   width: 60%;
+   transition: all 0.3s ease-in-out;
+   left: 20%;
+   bottom: 0;
+}
+.menu-item-container:hover .menu-item-text:after{
+   width: 90%;
+   left: 5%;
+}
+.menu-icon{
+	transition: all 0.6s ease-in-out;
+    display: inline-block;
+    position: absolute;
+    left: 94%;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 3%;
+    width: 40px;
+    text-align: center;
+}
+.template-name-text{
+	text-align: center;
+}
+.template-info-text{
+	text-align: center;
+}
+.template-info-container{
+	margin: 5%;
 }
