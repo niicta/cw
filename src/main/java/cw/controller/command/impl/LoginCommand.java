@@ -13,7 +13,7 @@ import java.util.Collection;
 public class LoginCommand implements Command {
     @Inject
     private User currentUser;
-    @EJB
+    @EJB(beanName = "userDao")
     private DAO<User> userDAO;
 
     @Override

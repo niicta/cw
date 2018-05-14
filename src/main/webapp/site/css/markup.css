@@ -191,3 +191,65 @@ body{
     width: 25px;
     height: auto;
 }
+
+.form-block{
+    top: 0;
+    min-width: 100%;
+    position: fixed;
+    z-index: 10;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
+.create-template-form-block{
+    display: none;
+}
+.form{
+    min-width: 30vw;
+    min-height: 30vh;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+}
+.form-input-container{
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.form-caption{
+    width: 100%;
+    padding: 10px 0;
+}
+.form-caption p{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.parameters-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+.form-input-container{
+    justify-content: space-around;
+}
+.form-input-container *{
+    width: 50%;
+    text-align: right;
+    -ms-align-items: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.form-input-container .text-input{
+    text-align: left;
+}
+.buttons-container{
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-around;
+}

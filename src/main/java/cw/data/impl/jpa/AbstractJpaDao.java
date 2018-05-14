@@ -18,7 +18,7 @@ import static javax.ejb.TransactionAttributeType.MANDATORY;
 import static javax.ejb.TransactionAttributeType.REQUIRED;
 
 @TransactionManagement(value= TransactionManagementType.BEAN)
-@TransactionAttribute(value=MANDATORY)
+@TransactionAttribute(value=REQUIRED)
 public abstract class AbstractJpaDao<T> implements DAO<T>
 {
     private static final Logger LOG = Logger.getLogger(AbstractJpaDao.class);

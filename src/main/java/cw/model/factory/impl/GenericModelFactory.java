@@ -10,6 +10,7 @@ import java.util.Collection;
 import javax.ejb.*;
 
 @Stateless
+@Local(ModelFactory.class)
 public class GenericModelFactory implements ModelFactory
 {
     @Override

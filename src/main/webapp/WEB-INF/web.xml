@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
+
     <servlet>
         <servlet-name>test</servlet-name>
-        <servlet-class>cw.servlets.test.CreateUserObject</servlet-class>
+        <servlet-class>cw.servlets.test.CreateTemplateObject</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>test</servlet-name>
@@ -29,7 +30,7 @@
 
     <servlet>
         <servlet-name>loginJson</servlet-name>
-        <servlet-class>cw.servlets.json.LoginJsonServlet</servlet-class>
+        <servlet-class>cw.servlets.json.impl.LoginJsonServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>loginJson</servlet-name>
@@ -38,10 +39,19 @@
 
     <servlet>
         <servlet-name>userJson</servlet-name>
-        <servlet-class>cw.servlets.json.CurrentUserJsonServlet</servlet-class>
+        <servlet-class>cw.servlets.json.impl.CurrentUserJsonServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>userJson</servlet-name>
         <url-pattern>/userJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>createTemplateJson</servlet-name>
+        <servlet-class>cw.servlets.json.impl.CreateTemplateJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createTemplateJson</servlet-name>
+        <url-pattern>/createTemplateJson</url-pattern>
     </servlet-mapping>
 </web-app>

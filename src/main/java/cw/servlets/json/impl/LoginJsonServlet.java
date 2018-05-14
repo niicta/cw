@@ -1,7 +1,8 @@
-package cw.servlets.json;
+package cw.servlets.json.impl;
 
 import com.google.gson.JsonElement;
 import cw.controller.command.ControllerCommandConstants;
+import cw.servlets.json.AbstractJsonServlet;
 import cw.utils.context.ContextMap;
 import org.apache.log4j.Logger;
 

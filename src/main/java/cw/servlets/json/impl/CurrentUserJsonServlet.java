@@ -1,8 +1,9 @@
-package cw.servlets.json;
+package cw.servlets.json.impl;
 
 import com.google.gson.JsonElement;
 import cw.controller.command.ControllerCommandConstants;
 import cw.model.User;
+import cw.servlets.json.AbstractJsonServlet;
 import cw.utils.context.ContextMap;
 
 import javax.inject.Inject;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class CurrentUserJsonServlet extends AbstractJsonServlet{
+public class CurrentUserJsonServlet extends AbstractJsonServlet {
     @Inject
     private User user;
 

@@ -103,5 +103,53 @@
             </li>
         </ul>
     </div>
+</div>
+
+<div class="create-template-form-block form-block flex-column ">
+    <div class="create-template-form form flex-column">
+
+        <div class="create-template-text-block form-caption flex-row">
+            <p class="create-template-text">Создание тарифа</p>
+        </div>
+
+        <div class="parameters-container flex-column">
+            <div class="template-name-container flex-row form-input-container">
+                <p class="template-name-text">Название: </p>
+                <input type="text" class="template-name text-input"/>
+            </div>
+
+            <div class="space-type-container flex-row form-input-container">
+                <p class="space-type-text">Переговорная комната: </p>
+                <input type="checkbox" class="space-type checkbox-input"/>
+            </div>
+
+            <div class="fixed-place-container flex-row form-input-container">
+                <p class="fixed-place-text">Фиксированное рабочее место: </p>
+                <input type="checkbox" class="fixed-place checkbox-input"/>
+            </div>
+
+            <div class="full-week-container flex-row form-input-container">
+                <p class="full-week-text">Полная неделя: </p>
+                <input type="checkbox" class="full-week checkbox-input"/>
+            </div>
+
+            <div class="count-of-places-container flex-row form-input-container">
+                <p class="count-of-places-text">Количество рабочих мест: </p>
+                <input type="text" class="count-of-places text-input"/>
+            </div>
+
+            <div class="base-price-container flex-row form-input-container">
+                <p class="base-price-text">Базовая цена за час: </p>
+                <input type="text" class="base-price text-input"/>
+            </div>
+
+            <div class="buttons-container flex-row">
+                <div class="button submit-create-template-button">Создать</div>
+                <div class="button cancel-create-template-button">Отмена</div>
+            </div>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>

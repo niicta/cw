@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="site/css/markup.css">
     <link rel="stylesheet" type="text/css" href="site/css/theme.css">
     <script src="site/script/jquery-3.2.1.js"></script>
-    <script src="site/script/scripts.js"></script>
+    <script src="site/script/loginScript.js"></script>
 </head>
 <body>
 <div class="main-backgroung">

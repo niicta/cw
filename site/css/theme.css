@@ -76,3 +76,23 @@ body{
 	background:  #f1edff;
 	border: 0.01em solid #f1edff	;
 }
+
+.form-block{
+    background: rgba(0,0,0,60%);
+}
+.form{
+	background: #f4f4f4;
+	border: 0px solid rgba(0,0,0,1);
+	border-radius: 15px;
+	overflow: hidden;
+}
+.form-caption{
+	background: #6E84D6;
+}
+.form-caption{
+	color: #e7e5ff
+}
+.buttons-container .button:hover{
+	background:  #c0c7f6;
+	border: 0.01em solid #c0c7f6	;
+}

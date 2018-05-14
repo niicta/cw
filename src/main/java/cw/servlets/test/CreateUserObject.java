@@ -16,7 +16,7 @@ import java.util.Collection;
 import java.util.List;
 
 public class CreateUserObject extends HttpServlet {
-    @EJB
+    @EJB(beanName = "userDao")
     DAO<User> userDAO;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

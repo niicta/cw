@@ -19,6 +19,7 @@ public class Controller
     private CommandPool commandPool;
 
     public ContextMap executeCommandByContext(ContextMap contextMap){
+        LOG.debug("finding command");
         LOG.debug("Using command - " + commandPool.selectCommand(contextMap));
         return commandPool.selectCommand(contextMap).execute(contextMap);
     }

@@ -1,6 +1,7 @@
 package cw.servlets.json.builders;
 
 import cw.servlets.json.builders.impl.LoginResultJsonBuilder;
+import cw.servlets.json.builders.impl.TemplateJsonBuider;
 import cw.servlets.json.builders.impl.UnknownErrorJsonBuilder;
 import cw.servlets.json.builders.impl.UserJsonBuilder;
 import cw.utils.context.ContextMap;
@@ -23,6 +24,7 @@ public class JsonBuilderPool {
         jsonBuilders = new ArrayList<JsonBuilder>();
         jsonBuilders.add(CDI.current().select(LoginResultJsonBuilder.class).get());
         jsonBuilders.add(CDI.current().select(UserJsonBuilder.class).get());
+        jsonBuilders.add(CDI.current().select(TemplateJsonBuider.class).get());
         jsonBuilders.add(CDI.current().select(UnknownErrorJsonBuilder.class).get());
         unknownErrorBuilder = new UnknownErrorJsonBuilder();
     }

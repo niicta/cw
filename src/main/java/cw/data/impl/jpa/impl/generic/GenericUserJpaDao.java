@@ -13,7 +13,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
-@Stateless
+@Stateless(name = "userDao", mappedName = "userDao")
 @Local(cw.data.DAO.class)
 public class GenericUserJpaDao extends AbstractJpaDao<User>
 {
