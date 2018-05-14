@@ -76,3 +76,14 @@ body{
     background:  #f1edff;
     border: 0.01em solid #f1edff	;
 }
+.template-container:hover{
+    box-shadow: 3px 0px 30px rgba(110, 132, 214, 0.8);
+}
+.delete-button-icon{
+    filter: opacity(30%);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+.delete-button-icon:hover{
+    filter: opacity(70%);
+}

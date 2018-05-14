@@ -1,8 +1,8 @@
 <%@ page import="cw.auth.UserContainer" %>
 <%@ page import="cw.model.User" %>
+<%@ page import="javax.enterprise.inject.spi.CDI" %>
 <%@ page contentType="text/html;charset=utf-8" %>
-<jsp:useBean id="user" class="cw.model.impl.generic.GenericUser" scope="session"/>
-
+<% User user = CDI.current().select(User.class).get(); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
         <div class="header flex-row">
             <div class="filler"></div>
             <div class="user-container">
-                <p class="user-name-text">${user.name}</p>
+                <p class="user-name-text"><%= user.getName() %></p>
             </div>
             <div class="info-container">
                 <p class="info-text">Справка</p>
@@ -28,6 +28,7 @@
     </div>
     <div class="content flex-row">
         <p>Тарифы:</p>
+        <% for (int i = 0; i < 5; i++){ %>
         <div class="template-container flex-column">
             <div class="template-name-container"><p class="template-name-text">Тариф</p></div>
             <div class="template-info-container">
@@ -38,52 +39,11 @@
             <div class="submit-button-container">
                 <div class="button submit-template-button">Подать заявку</div>
             </div>
-        </div>
-        <div class="template-container flex-column">
-            <div class="template-name-container"><p class="template-name-text">Тариф</p></div>
-            <div class="template-info-container">
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-            </div>
-            <div class="submit-button-container">
-                <div class="button submit-template-button">Подать заявку</div>
+            <div class="delete-button">
+                <img src="site/icons/bin.png" alt="" class="delete-button-icon">
             </div>
         </div>
-        <div class="template-container flex-column">
-            <div class="template-name-container"><p class="template-name-text">Тариф</p></div>
-            <div class="template-info-container">
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-            </div>
-            <div class="submit-button-container">
-                <div class="button submit-template-button">Подать заявку</div>
-            </div>
-        </div>
-        <div class="template-container flex-column">
-            <div class="template-name-container"><p class="template-name-text">Тариф</p></div>
-            <div class="template-info-container">
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-            </div>
-            <div class="submit-button-container">
-                <div class="button submit-template-button">Подать заявку</div>
-            </div>
-        </div>
-        <div class="template-container flex-column">
-            <div class="template-name-container"><p class="template-name-text">Тариф</p></div>
-            <div class="template-info-container">
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-            </div>
-            <div class="submit-button-container">
-                <div class="button submit-template-button">Подать заявку</div>
-            </div>
-        </div>
-
+        <%}%>
         <div class="template-container flex-column">
             <div class="new-template-button button">Новый тариф</div>
         </div>
