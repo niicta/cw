@@ -89,8 +89,7 @@ body{
     text-align: center;
 }
 .content{
-    -ms-align-items: center;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
@@ -182,7 +181,7 @@ body{
 .template-info-container{
     margin: 5%;
 }
-.delete-button{
+.delete-template-button{
     position: absolute;
     top: 0;
     left: 0;
@@ -253,3 +252,28 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+
+
+.create-room-form-block{
+    display: none;
+}
+.spaces-block, .rooms-block{
+    width: 40%;
+}
+.space-container{
+    background: #fff;
+    border: 1px solid rgba(160,160,160, 0.3);
+    margin: 10px;
+    /*flex-basis: 150px;*/
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    transition: all 0.3s ease-in;
+}
+.new-space-button-container{
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+

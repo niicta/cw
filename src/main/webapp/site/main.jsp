@@ -22,17 +22,8 @@
 </head>
 <body>
 <div class="entire-page flex-column">
-    <div class="header-container">
-        <div class="header flex-row">
-            <div class="filler"></div>
-            <div class="user-container">
-                <p class="user-name-text"><%= user.getName() %></p>
-            </div>
-            <div class="info-container">
-                <p class="info-text">Справка</p>
-            </div>
-        </div>
-    </div>
+    <%@include file="header.jsp"%>
+
     <div class="content flex-row">
         <p>Тарифы:</p>
         <% for (Template template : daoContainer.getTemplateDAO().findAll()){ %>
@@ -67,7 +58,7 @@
             <div class="submit-button-container">
                 <div class="button submit-template-button">Подать заявку</div>
             </div>
-            <div class="delete-button">
+            <div class="delete-template-button">
                 <img src="site/icons/bin.png" alt="" class="delete-button-icon">
             </div>
         </div>
@@ -76,6 +67,8 @@
             <div class="new-template-button button">Новый тариф</div>
         </div>
     </div>
+
+
     <%@include file="menu.jsp"%>
 </div>
 

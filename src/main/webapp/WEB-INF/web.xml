@@ -29,6 +29,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>spaces</servlet-name>
+        <jsp-file>/site/spaces.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>spaces</servlet-name>
+        <url-pattern>/spaces</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>loginJson</servlet-name>
         <servlet-class>cw.servlets.json.impl.LoginJsonServlet</servlet-class>
     </servlet>
@@ -53,5 +62,14 @@
     <servlet-mapping>
         <servlet-name>createTemplateJson</servlet-name>
         <url-pattern>/createTemplateJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>createSpaceJson</servlet-name>
+        <servlet-class>cw.servlets.json.impl.CreateSpaceJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createSpaceJson</servlet-name>
+        <url-pattern>/createSpaceJson</url-pattern>
     </servlet-mapping>
 </web-app>

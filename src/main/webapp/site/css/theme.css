@@ -72,11 +72,13 @@ body{
     border-radius: 5px;
     overflow: hidden;
 }
-.template-container .button:hover{
+.template-container .button:hover,
+.space-container .button:hover{
     background:  #f1edff;
     border: 0.01em solid #f1edff	;
 }
-.template-container:hover{
+.template-container:hover,
+.space-container:hover{
     box-shadow: 3px 0px 30px rgba(110, 132, 214, 0.8);
 }
 .delete-button-icon{
@@ -106,4 +108,8 @@ body{
 .buttons-container .button:hover{
     background:  #c0c7f6;
     border: 0.01em solid #c0c7f6	;
+}
+.menu-link{
+    text-decoration: none;
+    color: #e7e5ff;
 }

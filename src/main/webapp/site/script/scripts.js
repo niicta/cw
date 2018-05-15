@@ -1,6 +1,14 @@
 $('document').ready(function(){
     $('.new-template-button').click(function(){
         showNewTemplateForm();
+    });
+
+    $('.new-room-button').click(function(){
+        showNewRoomForm();
+    });
+
+    $('.new-space-button').click(function(){
+        createNewSpace();
     })
 });
 
@@ -42,3 +50,54 @@ function closeNewTemplateForm(){
     $(".create-template-form-block").fadeTo(0.3, 0);
     setTimeout(function(){$(".create-template-form-block").hide()}, 300);
 }
+
+function showNewRoomForm(){
+    setTimeout(function(){
+        $(".create-room-form-block").fadeTo(0, 0).css('display', 'flex').fadeTo(0, 1);
+        $('.cancel-create-room-button').click(function(){
+            closeNewRoomForm();
+        });
+        $('.submit-create-room-button').click(function () {
+            var countOfPlaces = $('.room-count').val();
+            var spaceType = 0;
+            $.ajax({
+                    type : "POST",
+                    url : "createSpaceJson",
+                    data: {
+                        'space-type': spaceType,
+                        'count-of-places' : countOfPlaces,
+                    },
+                    success : function () {
+                        location.reload();
+                    }
+                }
+            )
+
+        })
+
+    }, 300);
+}
+
+function closeNewRoomForm(){
+    $(".create-room-form-block").fadeTo(0.3, 0);
+    setTimeout(function(){$(".create-room-form-block").hide()}, 300);
+}
+
+function createNewSpace(){
+    setTimeout(function(){
+            $.ajax({
+                    type : "POST",
+                    url : "createSpaceJson",
+                    data: {
+                        'space-type': 1,
+                        'count-of-places' : 1,
+                    },
+                    success : function () {
+                        location.reload();
+                    }
+                }
+            )
+
+    }, 300);
+}
+

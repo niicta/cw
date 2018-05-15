@@ -6,7 +6,9 @@ import cw.data.DAO;
 import cw.model.Space;
 import cw.model.SpaceType;
 import cw.model.factory.ModelFactory;
+import cw.servlets.json.impl.CreateSpaceJsonServlet;
 import cw.utils.context.ContextMap;
+import org.apache.log4j.Logger;
 
 import javax.ejb.EJB;
 
@@ -17,7 +19,7 @@ public class CreateSpaceCommand implements Command {
     private ModelFactory modelFactory;
     @EJB(beanName = "spaceDao")
     private DAO<Space> spaceDao;
-
+    private static final Logger LOG = Logger.getLogger(CreateSpaceCommand.class);
     @Override
     public boolean canExecute(ContextMap commandContext) {
         return commandContext.getValue(ControllerCommandConstants.COMMAND_TYPE_ATTRIBUTE)
@@ -26,10 +28,15 @@ public class CreateSpaceCommand implements Command {
 
     @Override
     public ContextMap execute(ContextMap commandContext) {
-        fillParametersFromContext(commandContext);
-        Space createdSpace = createSpace();
-        saveSpace(createdSpace);
-        return buildResultMap(createdSpace);
+        try {
+            fillParametersFromContext(commandContext);
+            Space createdSpace = createSpace();
+            saveSpace(createdSpace);
+            return buildResultMap(createdSpace);
+        } catch (Exception e){
+            LOG.debug("ex", e);
+            throw e;
+        }
     }
 
     private ContextMap buildResultMap(Space createdSpace) {
@@ -43,12 +50,17 @@ public class CreateSpaceCommand implements Command {
     }
 
     private Space createSpace() {
+        if (spaceType.equals(SpaceType.WORK_PLACE))
+            countOfSeats = 1;
         return modelFactory.createSpace(spaceType, countOfSeats);
     }
 
     private void fillParametersFromContext(ContextMap commandContext) {
-        countOfSeats = (Integer) commandContext.getValue(ControllerCommandConstants.COUNT_OF_SEATS_ATTRIBUTE);
+        LOG.debug("context " + commandContext);
+        countOfSeats = (Integer) commandContext.getValue(ControllerCommandConstants.COUNT_OF_PLACES_ATTRIBUTE);
+        LOG.debug("count of seats " + countOfSeats);
         int spaceTypeId = (Integer) commandContext.getValue(ControllerCommandConstants.SPACE_TYPE_ATTRIBUTE);
+        LOG.debug("space type " + spaceTypeId);
         spaceType = SpaceType.valueOf(spaceTypeId);
     }
 

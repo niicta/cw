@@ -41,5 +41,11 @@ function login(){
 }
 
 function performLoginResult(loginResult){
-    alert(loginResult);
+    if(loginResult['login-result'] === 'LOGIN_RESULT_SUCCESS'){
+        window.location.href = 'main';
+    }
+    else {
+        alert("Неверный логин или пароль")
+    }
+
 }
