@@ -3,11 +3,9 @@ package cw.controller.command.impl;
 import cw.controller.command.Command;
 import cw.controller.command.ControllerCommandConstants;
 import cw.data.DAO;
-import cw.data.impl.jpa.impl.generic.GenericTemplateJpaDao;
 import cw.model.SpaceType;
 import cw.model.Template;
 import cw.model.factory.ModelFactory;
-import cw.model.impl.generic.GenericTemplate;
 import cw.utils.context.ContextMap;
 
 import javax.ejb.EJB;
@@ -19,7 +17,7 @@ public class CreateTemplateCommand implements Command
     @EJB(beanName = "templateDao")
     private DAO<Template> templateDAO;
     private boolean fixed;
-    private boolean fullWeel;
+    private boolean fullWeek;
     private int countOfPlaces ;
     private double basePricePerHour;
     private String name;
@@ -50,13 +48,13 @@ public class CreateTemplateCommand implements Command
     }
 
     private Template createTemplate(){
-        return modelFactory.createTemplate(spaceType, fixed, fullWeel, countOfPlaces, basePricePerHour, name);
+        return modelFactory.createTemplate(spaceType, fixed, fullWeek, countOfPlaces, basePricePerHour, name);
     }
 
     private void fillParametersFromContext(ContextMap commandContext){
         int spaceTypeId = (Integer) commandContext.getValue(ControllerCommandConstants.SPACE_TYPE_ATTRIBUTE);
         fixed = (Boolean)commandContext.getValue(ControllerCommandConstants.FIXED_SPACE_ATTRIBUTE);
-        fullWeel = (Boolean)commandContext.getValue(ControllerCommandConstants.FULL_WEEK_ATTRIBUTE);
+        fullWeek = (Boolean)commandContext.getValue(ControllerCommandConstants.FULL_WEEK_ATTRIBUTE);
         countOfPlaces = (Integer)commandContext.getValue(ControllerCommandConstants.COUNT_OF_PLACES_ATTRIBUTE);
         basePricePerHour = (Double) commandContext.getValue(ControllerCommandConstants.BASE_PRICE_PER_HOUR_ATTRIBUTE);
         name = (String)commandContext.getValue(ControllerCommandConstants.TEMPLATE_NAME_ATTRIBUTE);

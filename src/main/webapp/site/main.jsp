@@ -1,8 +1,15 @@
 <%@ page import="cw.auth.UserContainer" %>
 <%@ page import="cw.model.User" %>
 <%@ page import="javax.enterprise.inject.spi.CDI" %>
+<%@ page import="cw.data.DAO" %>
+<%@ page import="cw.model.Template" %>
+<%@ page import="javax.ejb.EJB" %>
+<%@ page import="cw.data.DAOContainer" %>
+<%@ page import="cw.model.SpaceType" %>
 <%@ page contentType="text/html;charset=utf-8" %>
+
 <% User user = CDI.current().select(User.class).get(); %>
+<% DAOContainer daoContainer = CDI.current().select(DAOContainer.class).get(); %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +35,34 @@
     </div>
     <div class="content flex-row">
         <p>Тарифы:</p>
-        <% for (int i = 0; i < 5; i++){ %>
+        <% for (Template template : daoContainer.getTemplateDAO().findAll()){ %>
         <div class="template-container flex-column">
-            <div class="template-name-container"><p class="template-name-text">Тариф</p></div>
+            <div class="template-name-container"><p class="template-name-text"><%=template.getName()%></p></div>
             <div class="template-info-container">
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
-                <p class="template-info-text">Информация о тарифе</p>
+                <p class="template-info-text">
+                    <%if (template.getSpaceType().equals(SpaceType.MEETING_ROOM)) {%>
+                    Переговорная комната
+                    <%} else if (template.isFixed()){ %>
+                    Фиксированное рабочее место
+                    <%} else {%>
+                    Плавающее рабочее место
+                    <%}%>
+                </p>
+                <p class="template-info-text">
+                    <%if (template.isFullWeek()){%>
+                    Всю неделю
+                    <%} else {%>
+                    Только по будням
+                    <%}%>
+                </p>
+                <%if (template.getCountOfPlaces() > 1){%>
+                <p class="template-info-text">
+                    Рабочих мест : <%=template.getCountOfPlaces()%>
+                </p>
+                <%}%>
+                <p class="template-info-text">
+                    Стоимость часа : <%=template.getBasePricePerHour()%>
+                </p>
             </div>
             <div class="submit-button-container">
                 <div class="button submit-template-button">Подать заявку</div>
@@ -48,61 +76,7 @@
             <div class="new-template-button button">Новый тариф</div>
         </div>
     </div>
-    <div class="menu flex-column">
-        <div class="menu-icon">≡</div>
-        <ul class="menu-list">
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-            <li class="menu-item">
-                <div class="menu-item-container">
-                    <p class="menu-item-text">Пункт меню</p>
-                </div>
-            </li>
-        </ul>
-    </div>
+    <%@include file="menu.jsp"%>
 </div>
 
 <div class="create-template-form-block form-block flex-column ">
