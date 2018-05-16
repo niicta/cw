@@ -63,6 +63,4 @@ public class CreateSpaceCommand implements Command {
         LOG.debug("space type " + spaceTypeId);
         spaceType = SpaceType.valueOf(spaceTypeId);
     }
-
-
 }

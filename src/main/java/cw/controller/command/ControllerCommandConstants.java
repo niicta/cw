@@ -15,6 +15,9 @@ public class ControllerCommandConstants
     public static final String TEMPLATE_OBJECT_ATTRIBUTE = "TEMPLATE_OBJECT_ATTRIBUTE";
     public static final String COUNT_OF_SEATS_ATTRIBUTE = "COUNT_OF_SEATS_ATTRIBUTE";
     public static final String SPACE_OBJECT_ATTRIBUTE = "SPACE_OBJECT_ATTRIBUTE";
+    public static final String USER_ID_ATTRIBUTE = "USER_ID_ATTRIBUTE";
+    public static final String TEMPLATE_ID_ATTRIBUTE = "TEMPLATE_ID_ATTRIBUTE";
+    public static final String ORDER_OBJECT_ATTRIBUTE = "ORDER_OBJECT_ATTRIBUTE";
 
     public static final String LOGIN_COMMAND_VALUE = "LOGIN_COMMAND_VALUE";
     public static final String LOGIN_RESULT_SUCCESS = "LOGIN_RESULT_SUCCESS";
@@ -23,5 +26,6 @@ public class ControllerCommandConstants
     public static final String USER_ATTRIBUTE = "USER_ATTRIBUTE";
     public static final String CREATE_TEMPLATE_COMMAND_VALUE = "CREATE_TEMPLATE_COMMAND_VALUE";
     public static final String CREATE_SPACE_COMMAND_VALUE = "CREATE_SPACE_COMMAND_VALUE";
-
+    public static final String CREATE_ORDER_COMMAND_VALUE = "CREATE_ORDER_COMMAND_VALUE";
+    public static final String CREATE_VISIT_COMMAND_VALUE = "CREATE_VISIT_COMMAND_VALUE";
 }
