@@ -18,6 +18,11 @@ public class ControllerCommandConstants
     public static final String USER_ID_ATTRIBUTE = "USER_ID_ATTRIBUTE";
     public static final String TEMPLATE_ID_ATTRIBUTE = "TEMPLATE_ID_ATTRIBUTE";
     public static final String ORDER_OBJECT_ATTRIBUTE = "ORDER_OBJECT_ATTRIBUTE";
+    public static final String VISIT_START_DATE_ATTRIBUTE = "VISIT_START_DATE_ATTRIBUTE";
+    public static final String VISIT_END_DATE_ATTRIBUTE = "VISIT_END_DATE_ATTRIBUTE";
+    public static final String VISIT_START_HOUR_ATTRIBUTE = "VISIT_START_HOUR_ATTRIBUTE";
+    public static final String VISIT_END_HOUR_ATTRIBUTE = "VISIT_END_HOUR_ATTRIBUTE";
+    public static final String ORDER_ID_ATTRIBUTE = "ORDER_ID_ATTRIBUTE";
 
     public static final String LOGIN_COMMAND_VALUE = "LOGIN_COMMAND_VALUE";
     public static final String LOGIN_RESULT_SUCCESS = "LOGIN_RESULT_SUCCESS";
@@ -28,4 +33,6 @@ public class ControllerCommandConstants
     public static final String CREATE_SPACE_COMMAND_VALUE = "CREATE_SPACE_COMMAND_VALUE";
     public static final String CREATE_ORDER_COMMAND_VALUE = "CREATE_ORDER_COMMAND_VALUE";
     public static final String CREATE_VISIT_COMMAND_VALUE = "CREATE_VISIT_COMMAND_VALUE";
+
+
 }
