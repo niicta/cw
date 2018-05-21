@@ -26,6 +26,7 @@ public class CommandPool
         commands.add(CDI.current().select(CreateSpaceCommand.class).get());
         commands.add(CDI.current().select(CreateOrderCommand.class).get());
         commands.add(CDI.current().select(CreateVisitCommand.class).get());
+        commands.add(CDI.current().select(DeleteVisitCommand.class).get());
     }
 
     public Command selectCommand(ContextMap commandContext){

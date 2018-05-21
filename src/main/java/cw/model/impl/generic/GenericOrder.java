@@ -20,7 +20,7 @@ public class GenericOrder implements Order {
     private int id;
     @ManyToOne
     private GenericUser user;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private Collection<GenericVisit> visits;
     @OneToOne
     private GenericTemplate template;

@@ -55,7 +55,7 @@
                     <div class="visit-space-container flex-column">
                         <p class="visit-space-text">Рабочее место №<%=visit.getSpace().getId()%></p>
                     </div>
-                    <div class="delete-visit-button">
+                    <div class="delete-visit-button" data-visit-id="<%=visit.getId()%>">
                         <img src="site/icons/bin.png" alt="" class="delete-button-icon"/>
                     </div>
                 </div>

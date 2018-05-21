@@ -8,14 +8,38 @@ $('document').ready(function(){
         showNewVisitForm(orderId);
     });
 
+    $('.delete-visit-button').click(function () {
+       var visitId =  $(this).attr('data-visit-id');
+       deleteVisit(visitId);
+    });
+
     $('.new-room-button').click(function(){
         showNewRoomForm();
     });
 
     $('.new-space-button').click(function(){
         createNewSpace();
+    });
+
+    $('.submit-template-button').click(function () {
+        var templateId = $(this).attr('data-template-id');
+        createOrder(templateId);
     })
 });
+
+function deleteVisit(visitId) {
+    $.ajax({
+            type : "POST",
+            url : "deleteVisitJson",
+            data: {
+                'visit-id': visitId
+            },
+            success : function () {
+                location.reload();
+            }
+        }
+    )
+}
 
 function showNewTemplateForm(){
     setTimeout(function(){
@@ -136,7 +160,7 @@ function createNewSpace(){
                     url : "createSpaceJson",
                     data: {
                         'space-type': 1,
-                        'count-of-places' : 1,
+                        'count-of-places' : 1
                     },
                     success : function () {
                         location.reload();
@@ -147,8 +171,7 @@ function createNewSpace(){
     }, 300);
 }
 
-function createOrder() {
-    var templateId = this.id;
+function createOrder(templateId) {
     setTimeout(function(){
         $.ajax({
                 type : "POST",

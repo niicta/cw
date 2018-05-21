@@ -37,6 +37,10 @@ public class VisitCreationPossibilityChecker extends AbstractChecker {
         for (Checker checker : checkers){
             debug("current checker - " + checker.getClass());
             ContextMap checkerResult = checker.check(contextMap);
+            debug("checker result " + checkerResult.getValue(CheckerConstants.CHECKER_RESULT_ATTRIBUTE));
+            for (String attr : checkerResult.getAttributes()){
+                debug("result attr " + attr + " result value " + checkerResult.getValue(attr));
+            }
             if (checkerResult.getValue(CheckerConstants.CHECKER_RESULT_ATTRIBUTE)
                     .equals(CheckerConstants.CHECKER_RESULT_FAIL_VALUE)){
                 debug("failed");

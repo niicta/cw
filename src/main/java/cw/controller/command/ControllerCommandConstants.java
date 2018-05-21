@@ -27,6 +27,7 @@ public class ControllerCommandConstants
     public static final String USER_ATTRIBUTE = "USER_ATTRIBUTE";
     public static final String ERROR_REASON_ATTRIBUTE = "ERROR_REASON_ATTRIBUTE";
     public static final String VISIT_OBJECT_ATTRIBUTE = "VISIT_OBJECT_ATTRIBUTE";
+    public static final String VISIT_TO_DELETE_ID_ATTRIBUTE = "VISIT_TO_DELETE_ID_ATTRIBUTE";
 
     public static final String LOGIN_COMMAND_VALUE = "LOGIN_COMMAND_VALUE";
     public static final String LOGIN_RESULT_SUCCESS = "LOGIN_RESULT_SUCCESS";
@@ -37,4 +38,6 @@ public class ControllerCommandConstants
     public static final String CREATE_ORDER_COMMAND_VALUE = "CREATE_ORDER_COMMAND_VALUE";
     public static final String CREATE_VISIT_COMMAND_VALUE = "CREATE_VISIT_COMMAND_VALUE";
     public static final String VISIT_CREATION_ERROR_VALUE = "VISIT_CREATION_ERROR_VALUE";
+    public static final String DELETE_VISIT_COMMAND_VALUE = "DELETE_VISIT_COMMAND_VALUE";
+
 }

@@ -20,6 +20,7 @@
             <property name="hibernate.current_session_context_class" value="jta"/>
             <property name="show_sql" value="false"/>
             <property name="hibernate.show_sql" value="false" />
+            <property name="current_session_context_class" value="thread"/>
         </properties>
     </persistence-unit>
 </persistence>

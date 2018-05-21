@@ -99,4 +99,15 @@
         <servlet-name>createVisitJson</servlet-name>
         <url-pattern>/createVisitJson</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteVisitJson</servlet-name>
+        <servlet-class>cw.servlets.json.impl.DeleteVisitJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteVisitJson</servlet-name>
+        <url-pattern>/deleteVisitJson</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
