@@ -23,6 +23,9 @@ public class JsonBuilderPool {
         jsonBuilders.add(CDI.current().select(UserJsonBuilder.class).get());
         jsonBuilders.add(CDI.current().select(SpaceJsonBuilder.class).get());
         jsonBuilders.add(CDI.current().select(TemplateJsonBuider.class).get());
+        jsonBuilders.add(CDI.current().select(VisitJsonBuilder.class).get());
+        jsonBuilders.add(CDI.current().select(OrderJsonBuilder.class).get());
+        jsonBuilders.add(CDI.current().select(ErrorJsonBuilder.class).get());
         jsonBuilders.add(CDI.current().select(UnknownErrorJsonBuilder.class).get());
         unknownErrorBuilder = new UnknownErrorJsonBuilder();
     }

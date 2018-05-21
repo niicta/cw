@@ -2,11 +2,13 @@ package cw.model.operations;
 
 import cw.model.Visit;
 
+import javax.ejb.Local;
 import javax.ejb.Stateless;
 import java.util.Calendar;
 import java.util.Comparator;
 
-@Stateless
+@Stateless(name = "visitByStartDateComparator", mappedName = "visitByStartDateComparator")
+@Local(Comparator.class)
 public class VisitByStartDateComparator implements Comparator<Visit>
 {
     @Override

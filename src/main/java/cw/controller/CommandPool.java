@@ -1,9 +1,7 @@
 package cw.controller;
 
 import cw.controller.command.Command;
-import cw.controller.command.impl.CreateSpaceCommand;
-import cw.controller.command.impl.CreateTemplateCommand;
-import cw.controller.command.impl.LoginCommand;
+import cw.controller.command.impl.*;
 import cw.utils.context.ContextMap;
 import org.apache.log4j.Logger;
 
@@ -26,6 +24,8 @@ public class CommandPool
         commands.add(CDI.current().select(LoginCommand.class).get());
         commands.add(CDI.current().select(CreateTemplateCommand.class).get());
         commands.add(CDI.current().select(CreateSpaceCommand.class).get());
+        commands.add(CDI.current().select(CreateOrderCommand.class).get());
+        commands.add(CDI.current().select(CreateVisitCommand.class).get());
     }
 
     public Command selectCommand(ContextMap commandContext){

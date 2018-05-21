@@ -3,6 +3,7 @@ package cw.utils.context;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class ContextMap {
     public static final ContextMap EMPTY_OPERATION_RESULT = new ContextMap(true);
@@ -28,5 +29,9 @@ public class ContextMap {
 
     public void put(String attribute, Object value){
         contextMap.put(attribute, value);
+    }
+
+    public Set<String> getAttributes(){
+        return contextMap.keySet();
     }
 }

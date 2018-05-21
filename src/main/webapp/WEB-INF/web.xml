@@ -38,6 +38,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>visits</servlet-name>
+        <jsp-file>/site/visits.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>visits</servlet-name>
+        <url-pattern>/visits</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>loginJson</servlet-name>
         <servlet-class>cw.servlets.json.impl.LoginJsonServlet</servlet-class>
     </servlet>
@@ -65,11 +74,29 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>createOrderJson</servlet-name>
+        <servlet-class>cw.servlets.json.impl.CreateOrderJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createOrderJson</servlet-name>
+        <url-pattern>/createOrderJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>createSpaceJson</servlet-name>
         <servlet-class>cw.servlets.json.impl.CreateSpaceJsonServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>createSpaceJson</servlet-name>
         <url-pattern>/createSpaceJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>createVisitJson</servlet-name>
+        <servlet-class>cw.servlets.json.impl.CreateVisitJsonServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createVisitJson</servlet-name>
+        <url-pattern>/createVisitJson</url-pattern>
     </servlet-mapping>
 </web-app>

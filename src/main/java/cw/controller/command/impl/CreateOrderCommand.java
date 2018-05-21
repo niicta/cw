@@ -10,6 +10,7 @@ import cw.model.factory.ModelFactory;
 import cw.utils.context.ContextMap;
 
 import javax.ejb.EJB;
+import java.util.ArrayList;
 
 public class CreateOrderCommand implements Command
 {
@@ -46,7 +47,7 @@ public class CreateOrderCommand implements Command
     }
 
     private Order createOrder(){
-        return modelFactory.createOrder(user, null, template);
+        return modelFactory.createOrder(user, new ArrayList<>(), template);
     }
 
     private void saveOrder(Order createdOrder){

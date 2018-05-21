@@ -100,4 +100,16 @@ public class GenericVisit implements Visit {
     public void setFixed(boolean fixed) {
         this.fixed = fixed;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Generic visit, id = %d" +
+                " order id = %s template id = %s startDate - %s end date %s",
+                id, order == null? "null" : order.getId(), order == null? "null" : order.getTemplate().getId(), getStringForCalendar(startDate), getStringForCalendar(endDate));
+    }
+
+    private String getStringForCalendar(Calendar calendar){
+        return String.format("%d.%d.%d , %d hours",
+                calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.MONTH), calendar.get(Calendar.YEAR), calendar.get(Calendar.HOUR_OF_DAY));
+    }
 }

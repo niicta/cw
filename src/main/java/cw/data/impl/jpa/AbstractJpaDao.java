@@ -43,7 +43,7 @@ public abstract class AbstractJpaDao<T> implements DAO<T>
 
     @Override
     public void update(T t){
-        entityManager.refresh(t);
+        entityManager.merge(t);
     }
 
     @Override

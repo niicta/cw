@@ -56,7 +56,7 @@
                 </p>
             </div>
             <div class="submit-button-container">
-                <div class="button submit-template-button">Подать заявку</div>
+                <div class="button submit-template-button" id="<%=template.getId()%>" onclick="createOrder()">Подать заявку</div>
             </div>
             <div class="delete-template-button">
                 <img src="site/icons/bin.png" alt="" class="delete-button-icon">

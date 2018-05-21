@@ -59,4 +59,10 @@ public class GenericSpace implements Space{
     public void setCountOfSeats(int countOfSeats){
         this.countOfSeats = countOfSeats;
     }
+
+    @Override
+    public String toString() {
+        return String.format("space id = %d space type %s count of seats %d",
+                id, spaceType.name(), countOfSeats);
+    }
 }

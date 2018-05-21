@@ -4,6 +4,94 @@
 		"selected_items":
 		[
 			[
+				"visit-c",
+				"visit-content\t(visits.html)"
+			],
+			[
+				"ai",
+				"ai-fs\talign-items: flex-start;"
+			],
+			[
+				"roo",
+				"rooms-block\t(spaces.html)"
+			],
+			[
+				"bi",
+				"bin.png\tw:200 h:200"
+			],
+			[
+				"cancel",
+				"cancel-create-template-button\t(main.html)"
+			],
+			[
+				"create-te",
+				"create-template-form-block\t(main.html)"
+			],
+			[
+				"text-",
+				"text-input\t(main.html)"
+			],
+			[
+				"r",
+				"right\ttext-align"
+			],
+			[
+				"tal",
+				"ta-l\ttext-align: left;"
+			],
+			[
+				"param",
+				"parameters-container"
+			],
+			[
+				"para",
+				"parameters-container\t(main.html)"
+			],
+			[
+				"check",
+				"checkbox"
+			],
+			[
+				"che",
+				"checkbox\t(jquery-3.2.1.js)"
+			],
+			[
+				"lo",
+				"login-form"
+			],
+			[
+				"eas",
+				"ease-in-out"
+			],
+			[
+				"welco",
+				"welcome-block\t(index.html)"
+			],
+			[
+				"show",
+				"showMainForm"
+			],
+			[
+				"ca",
+				"cancel-login-button\t(index.html)"
+			],
+			[
+				"log",
+				"login-form\t(index.html)"
+			],
+			[
+				"welc",
+				"welcome-form\t(index.html)"
+			],
+			[
+				"d",
+				"display\tproperty"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
 				"tem",
 				"template-container\t(main.html)"
 			],
@@ -30,10 +118,6 @@
 			[
 				"ma",
 				"margin-right"
-			],
-			[
-				"r",
-				"right\tproperty"
 			],
 			[
 				"bor",
@@ -72,20 +156,12 @@
 				"min-height\tproperty"
 			],
 			[
-				"log",
-				"login-block\t(index.html)"
-			],
-			[
 				"c",
 				"cursor\tproperty"
 			],
 			[
 				"z",
 				"z-index\tproperty"
-			],
-			[
-				"lo",
-				"login-block\t(index.html)"
 			],
 			[
 				"fr",
@@ -110,10 +186,6 @@
 			[
 				"articleCo",
 				"article-content-block\t(index.html)"
-			],
-			[
-				"in",
-				"insertArticles"
 			],
 			[
 				"se",
@@ -206,10 +278,6 @@
 			[
 				"f",
 				"fixed"
-			],
-			[
-				"check",
-				"checkPassLogin"
 			],
 			[
 				"fun",
@@ -436,10 +504,6 @@
 				"inline-block"
 			],
 			[
-				"ai",
-				"ai-s\talign-items: stretch;"
-			],
-			[
 				"ais",
 				"ai-fs\talign-items: flex-start;"
 			],
@@ -450,34 +514,6 @@
 			[
 				"mark",
 				"markup.css"
-			],
-			[
-				"border-r",
-				"border-right"
-			],
-			[
-				"aes",
-				"align-self"
-			],
-			[
-				"ase",
-				"as-fe\talign-self: flex-end;"
-			],
-			[
-				"border",
-				"border"
-			],
-			[
-				"bac",
-				"background-image"
-			],
-			[
-				"borders",
-				"border-spacing"
-			],
-			[
-				"brc",
-				"border-color"
 			]
 		]
 	},
@@ -487,7 +523,25 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 765,
+				"buffer_size": 1450,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "visits.html",
+			"settings":
+			{
+				"buffer_size": 5030,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "spaces.html",
+			"settings":
+			{
+				"buffer_size": 5195,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -496,25 +550,33 @@
 			"file": "main.html",
 			"settings":
 			{
-				"buffer_size": 4606,
+				"buffer_size": 6448,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/D/edu/димлом/site/script/scripts.js",
+			"file": "script/scripts.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 514,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "script/jquery-3.2.1.js",
+			"settings":
+			{
+				"buffer_size": 268039,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/markup.css",
 			"settings":
 			{
-				"buffer_size": 3029,
+				"buffer_size": 5226,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -523,7 +585,7 @@
 			"file": "css/theme.css",
 			"settings":
 			{
-				"buffer_size": 1217,
+				"buffer_size": 1674,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -573,9 +635,11 @@
 	},
 	"expanded_folders":
 	[
+		"/D/edu/димлом/Project/cw/site/script"
 	],
 	"file_history":
 	[
+		"/D/edu/димлом/site/script/scripts.js",
 		"/D/edu/димлом/Project/cw/site/images/head.jpg",
 		"/D/edu/7сем/тси/firstsite/site/site/css/fonts.css",
 		"/D/edu/7сем/тси/firstsite/site/site/css/theme.css",
@@ -597,7 +661,7 @@
 	],
 	"find":
 	{
-		"height": 60.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -611,6 +675,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"template",
+			"year",
+			"day",
+			"template-name",
+			"template",
+			"time",
+			"date",
+			"spaces",
+			"content",
+			"site/",
+			"ready",
+			"hover",
+			"checkbox",
+			"full-week",
+			"input typ",
+			"emplate-name-text\"></p>\n\t\t\t\t<input type",
+			"input",
+			"fixed-place",
+			"opac",
+			"welcome-fo",
+			"welcome",
 			"but",
 			"ALIGN",
 			"HOVER",
@@ -717,18 +802,7 @@
 			"h2",
 			"text",
 			"video",
-			"line-h",
-			"tex",
-			"line",
-			"h3",
-			"a",
-			"element",
-			"content",
-			"content.nikr-flex-column",
-			"sing",
-			"\t-ms-align-items: center;\n\talign-items: center;",
-			"col-",
-			"col"
+			"line-h"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -752,7 +826,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -761,15 +835,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 765,
+						"buffer_size": 1450,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								765
+								867,
+								867
 							]
 						],
 						"settings":
@@ -784,24 +858,88 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "main.html",
+					"file": "visits.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4606,
+						"buffer_size": 5030,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3467,
-								3467
+								5013,
+								3463
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "plain text",
+							"buffer_scroll_name": "f449d11a",
+							"spell_check": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1938.4,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "spaces.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5195,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1525,
+								1378
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "plain text",
+							"buffer_scroll_name": "5944cf76",
+							"spell_check": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 527.2,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
 							]
 						],
 						"settings":
@@ -813,19 +951,56 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1244.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
 				{
-					"buffer": 2,
-					"file": "/D/edu/димлом/site/script/scripts.js",
+					"buffer": 4,
+					"file": "script/scripts.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 514,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								514
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "e56cf357",
+							"spell_check": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "script/jquery-3.2.1.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 268039,
 						"regions":
 						{
 						},
@@ -838,39 +1013,34 @@
 						],
 						"settings":
 						{
-							"bs_sintax": "plain text",
-							"buffer_scroll_name": "26e45683",
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "702134a7",
 							"spell_check": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "css/markup.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3029,
+						"buffer_size": 5226,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								3029
+								5226,
+								5105
 							]
 						],
 						"settings":
@@ -882,27 +1052,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1576.8,
+						"translation.y": 5716.8,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "css/theme.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1217,
+						"buffer_size": 1674,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								1217
+								1356,
+								1356
 							]
 						],
 						"settings":
@@ -914,10 +1084,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 913.0,
+						"translation.y": 1160.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -999,7 +1169,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},

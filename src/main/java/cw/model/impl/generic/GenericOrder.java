@@ -71,9 +71,10 @@ public class GenericOrder implements Order {
     @Override
     public void setVisits(Collection<Visit> visits) {
         List<GenericVisit> visitsToSet = new ArrayList<GenericVisit>();
-        ArrayList<Visit> incomingVisits = new ArrayList<>(visits);
+        ArrayList<Visit> incomingVisits = new ArrayList<>();
+        incomingVisits.addAll(visits);
         for (int i = 0; i < incomingVisits.size(); i++){
-            visitsToSet.set(i, (GenericVisit) incomingVisits.get(i));
+            visitsToSet.add((GenericVisit) incomingVisits.get(i));
         }
         this.visits = visitsToSet;
     }
@@ -86,5 +87,10 @@ public class GenericOrder implements Order {
     @Override
     public void setTemplate(Template template) {
         this.template = (GenericTemplate) template;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("order id = %d template id = %d visits - %s", id, template.getId(), visits.toString());
     }
 }

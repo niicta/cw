@@ -3,6 +3,11 @@ $('document').ready(function(){
         showNewTemplateForm();
     });
 
+    $('.new-visit-button').click(function(){
+        var orderId = $(this).attr('id');
+        showNewVisitForm(orderId);
+    });
+
     $('.new-room-button').click(function(){
         showNewRoomForm();
     });
@@ -51,6 +56,47 @@ function closeNewTemplateForm(){
     setTimeout(function(){$(".create-template-form-block").hide()}, 300);
 }
 
+function showNewVisitForm(orderId){
+    setTimeout(function(){
+        $(".create-visit-form-block").fadeTo(0, 0).css('display', 'flex').fadeTo(0, 1);
+        $('.cancel-visit-template-button').click(function(){
+            closeNewVisitForm();
+        });
+        $('.submit-create-visit-button').click(function () {
+            var visitDay = $('.visit-day').val();
+            var visitMonth = $('.visit-month').val();
+            var visitYear = $('.visit-year').val();
+            var visitStartHour = $('.visit-start-hour').val();
+            var visitEndHour = $('.visit-end-hour').val();
+            $.ajax({
+                    type : "POST",
+                    url : "createVisitJson",
+                    data: {
+                        "start-year" : visitYear,
+                        "end-year" : visitYear,
+                        "start-month" : visitMonth,
+                        "end-month" : visitMonth,
+                        "start-day" : visitDay,
+                        "end-day" : visitDay,
+                        "start-hour" : visitStartHour,
+                        "end-hour" : visitEndHour,
+                        "order-id" : orderId
+                    },
+                    success : function () {
+                        location.reload();
+                    }
+                }
+            )
+         })
+
+    }, 300);
+}
+
+function closeNewVisitForm(){
+    $(".create-visit-form-block").fadeTo(0.3, 0);
+    setTimeout(function(){$(".create-visit-form-block").hide()}, 300);
+}
+
 function showNewRoomForm(){
     setTimeout(function(){
         $(".create-room-form-block").fadeTo(0, 0).css('display', 'flex').fadeTo(0, 1);
@@ -97,6 +143,24 @@ function createNewSpace(){
                     }
                 }
             )
+
+    }, 300);
+}
+
+function createOrder() {
+    var templateId = this.id;
+    setTimeout(function(){
+        $.ajax({
+                type : "POST",
+                url : "createOrderJson",
+                data: {
+                    'template-id': templateId,
+                },
+                success : function () {
+                    window.location.href = 'visits';
+                }
+            }
+        )
 
     }, 300);
 }
