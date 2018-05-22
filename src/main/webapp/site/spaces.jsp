@@ -16,7 +16,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Добро пожаловать!</title>
+    <title>Рабочие места</title>
     <link rel="stylesheet" type="text/css" href="site/css/markup.css">
     <link rel="stylesheet" type="text/css" href="site/css/theme.css">
     <script src="site/script/jquery-3.2.1.js"></script>
@@ -24,9 +24,12 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
+<div class="content-backgroung">
+    <img class="content-backgroung-image" src="site/images/main.jpg">
+</div>
 <div class="content flex-row">
 <div class="spaces-block flex-column">
-    <p class="spaces-header">Рабочие места</p>
+    <p class="spaces-header section-name">Рабочие места</p>
 
     <div class="space-container new-space-button-container flex-row">
         <div class="new-space-button button">Новое место</div>

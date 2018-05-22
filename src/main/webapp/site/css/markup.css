@@ -40,6 +40,17 @@ body{
 .main-backgroung-image{
     width: 100%;
 }
+.content-backgroung{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    z-index: -1 ;
+    top: 0;
+    left: 0;
+}
+.content-backgroung-image{
+    width: 100%;
+}
 .welcome-block, .login-block{
     position:relative;
     z-index: 10;
@@ -100,7 +111,7 @@ body{
 }
 .template-container{
     position: relative;
-    background: #fff;
+    background: #e4ebf8;
     border: 1px solid rgba(160,160,160, 0.3);
     margin: 10px;
     flex-basis: 300px;
@@ -172,11 +183,23 @@ body{
     width: 40px;
     text-align: center;
 }
+.template-name-container{
+    width: 80%;
+    border-bottom: 1px solid rgba(160,160,160, 0.3);
+}
 .template-name-text{
     text-align: center;
+    font-family: "RalewayBold";
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.02em;
 }
-.template-info-text{
+.template-info-text, .visit-container p, .space-container p{
     text-align: center;
+    font-family: 'CleanvertisingLight';
+    font-weight: bold;
+    font-size: 1.05em;
+    letter-spacing: 0.02em;
 }
 .template-info-container{
     margin: 5%;
@@ -261,7 +284,7 @@ body{
     width: 40%;
 }
 .space-container{
-    background: #fff;
+    background: #e4ebf8;
     border: 1px solid rgba(160,160,160, 0.3);
     margin: 10px;
     /*flex-basis: 150px;*/
@@ -288,7 +311,7 @@ body{
 
 .visit-container{
     width: 60%;
-    background: #fff;
+    background: #e4ebf8;
     border: 1px solid rgba(160,160,160, 0.3);
     margin: 10px;
     /*flex-basis: 150px;*/

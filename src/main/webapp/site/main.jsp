@@ -14,7 +14,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Добро пожаловать!</title>
+    <title>Тарифы</title>
     <link rel="stylesheet" type="text/css" href="site/css/markup.css">
     <link rel="stylesheet" type="text/css" href="site/css/theme.css">
     <script src="site/script/jquery-3.2.1.js"></script>
@@ -23,9 +23,11 @@
 <body>
 <div class="entire-page flex-column">
     <%@include file="header.jsp"%>
-
+    <div class="content-backgroung">
+        <img class="content-backgroung-image" src="site/images/main.jpg">
+    </div>
     <div class="content flex-row">
-        <p>Тарифы:</p>
+        <p class="section-name">Тарифы:</p>
         <% for (Template template : daoContainer.getTemplateDAO().findAll()){ %>
         <div class="template-container flex-column">
             <div class="template-name-container"><p class="template-name-text"><%=template.getName()%></p></div>
@@ -80,8 +82,8 @@
         </div>
 
         <div class="parameters-container flex-column">
-            <div class="template-name-container flex-row form-input-container">
-                <p class="template-name-text">Название: </p>
+            <div class="new-template-name-container flex-row form-input-container">
+                <p class="new-template-name-text">Название: </p>
                 <input type="text" class="template-name text-input"/>
             </div>
 

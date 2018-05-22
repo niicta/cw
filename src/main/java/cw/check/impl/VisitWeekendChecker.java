@@ -30,6 +30,8 @@ public class VisitWeekendChecker extends AbstractChecker {
         fillParamsFromContext(contextMap);
         debug(String.format("params: startDate %s fixedTemplate %b",
                 calendarToDateAndHourString(visitStartDate), order.getTemplate().isFixed()));
+        debug(String.format("params: template full week " + order.getTemplate().isFullWeek()));
+        debug(String.format("visit start day " + visitStartDate.get(Calendar.DAY_OF_WEEK)));
         if (!order.getTemplate().isFullWeek()){
             if (visitStartDate.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY ||
                     visitStartDate.get(Calendar.DAY_OF_WEEK) == Calendar.SATURDAY){

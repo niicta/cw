@@ -32,7 +32,7 @@
 <div class="login-block flex-column hidden">
     <div class="login-form flex-column">
         <div class="login-text-block flex-column">
-            <p class="login-text">Введите свои учетные данные:</p>
+            <p class="login-text login-text-caption">Введите свои учетные данные:</p>
         </div>
         <p class="login-text">Логин:</p>
         <input type="text" class="login"></input>

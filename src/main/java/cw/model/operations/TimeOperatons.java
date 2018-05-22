@@ -36,6 +36,6 @@ public class TimeOperatons {
 
     public static String calendarToDateString(Calendar calendar){
         return String.format("%d.%d.%d",
-                calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.MONTH), calendar.get(Calendar.YEAR));
+                calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.MONTH)+1, calendar.get(Calendar.YEAR));
     }
 }

@@ -1,3 +1,6 @@
+@import url("fonts.css");
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption|Ubuntu');
 body{
     background: #F4F4F4;
 }
@@ -11,11 +14,17 @@ body{
 .main-backgroung-image{
     filter: opacity(45%);
 }
+.content-backgroung{
+    background: #383b45;
+}
+.content-backgroung-image{
+    filter: opacity(18%);
+}
 .button{
     border-radius: 	0px;
     border: 0.01em solid rgba(160,160,160, 0.4);
     background: transparent;
-    padding: 5px;
+    padding: 5px 10px;
     -ms-align-self: center;
     align-self: center;
     font-size: 1.2em;
@@ -41,17 +50,42 @@ body{
     transition: all 0.5s ease-in-out;
 }
 
-.welcome-text, .login-text{
+.login-text{
+    font-family: "CleanvertisingLight";
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.01em;
+    word-spacing: 0.1em;
+}
+
+.login-text{
+    color: rgba(160, 160, 160, 1);
+}
+
+.welcome-text, .login-text-caption{
     color: rgba( 160, 160, 160, 1);
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 1.7em;
+    letter-spacing: 0.02em;
 }
 .hidden{
     display: none;
 }
 .header{
-    background: #6E84D6;
+    background: #0a0331;
 }
 .header div p{
-    color: #e7e5ff
+    color: #e7e5ff;
+    font-family: 'CleanvertisingLight';
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+}
+.form{
+    font-family: 'CleanvertisingLight';
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.02em;
 }
 .menu-item-text{
     color: #e7e5ff;
@@ -75,13 +109,43 @@ body{
 .template-container .button:hover,
 .space-container .button:hover ,
 .visit-container .button:hover{
-    background:  #f1edff;
-    border: 0.01em solid #f1edff	;
+    background: #0a0331;
+    border: 0.01em solid #b5c7e9;
+    color: #fff;
 }
 .template-container:hover,
 .space-container:hover,
 .visit-container:hover{
     box-shadow: 3px 0px 30px rgba(110, 132, 214, 0.8);
+}
+.visit-template-header{
+    width: 60%;
+    /* border-bottom: 1px solid #fff; */
+    font-size: 1em;
+    font-family: 'CleanvertisingLight';
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #e7e5ff;
+}
+.error-form{
+    z-index: 1000;
+}
+.error-form-block{
+    display: none;
+    z-index: 1000;
+}
+.section-name{
+    width: 100%;
+    border-bottom:  1px solid #fff;
+    font-size: 1em;
+    font-family:  'CleanvertisingLight';
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform:  uppercase;
+    font-size: 1.5em;
+    color: #e7e5ff;
 }
 .delete-button-icon{
     filter: opacity(30%);
@@ -93,7 +157,7 @@ body{
 }
 
 .form-block{
-    background: rgba(0,0,0,60%);
+    background: rgba(200,200,200,60%);
 }
 .form{
     background: #f4f4f4;
@@ -102,10 +166,10 @@ body{
     overflow: hidden;
 }
 .form-caption{
-    background: #6E84D6;
+    background: #0a0331;
 }
 .form-caption{
-    color: #e7e5ff
+    color: #fff
 }
 .buttons-container .button:hover{
     background:  #c0c7f6;

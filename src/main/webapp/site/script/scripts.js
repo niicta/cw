@@ -83,7 +83,7 @@ function closeNewTemplateForm(){
 function showNewVisitForm(orderId){
     setTimeout(function(){
         $(".create-visit-form-block").fadeTo(0, 0).css('display', 'flex').fadeTo(0, 1);
-        $('.cancel-visit-template-button').click(function(){
+        $('.cancel-create-visit-button').click(function(){
             closeNewVisitForm();
         });
         $('.submit-create-visit-button').click(function () {
@@ -106,8 +106,8 @@ function showNewVisitForm(orderId){
                         "end-hour" : visitEndHour,
                         "order-id" : orderId
                     },
-                    success : function () {
-                        location.reload();
+                    success : function (result) {
+                        performCreateVisitResult(result);
                     }
                 }
             )
@@ -116,6 +116,27 @@ function showNewVisitForm(orderId){
     }, 300);
 }
 
+function performCreateVisitResult(result) {
+    if ('error-name' in result){
+        showErrorForm(result['error-reason'])
+    }
+    else {
+        location.reload();
+    }
+}
+function showErrorForm(message) {
+    setTimeout(function() {
+        $(".error-form-block").fadeTo(0, 0).css('display', 'flex').fadeTo(0, 1);
+        $(".error-text").empty().text(message)
+        $('.submit-error-button').click(function () {
+            closeErrorForm();
+        });
+    })
+}
+function closeErrorForm() {
+    $(".error-form-block").fadeTo(0.3, 0);
+    setTimeout(function(){$(".error-form-block").hide()}, 300);
+}
 function closeNewVisitForm(){
     $(".create-visit-form-block").fadeTo(0.3, 0);
     setTimeout(function(){$(".create-visit-form-block").hide()}, 300);

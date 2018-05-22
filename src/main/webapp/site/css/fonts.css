@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400|Exo+2:=500:100&subset=cyrillic');
+@font-face{
+	font-family: RalewayBold;
+	src: url("../fonts/RalewayBold/RalewayBold.eot");
+	src: url("../fonts/RalewayBold/RalewayBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RalewayBold/RalewayBold.woff") format("woff"),
+	url("../fonts/RalewayBold/RalewayBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+@font-face {
+			font-family: CleanvertisingLight;
+			src: url("../fonts/CleanvertisingLight/CleanvertisingLight.eot");
+			src: url("../fonts/CleanvertisingLight/CleanvertisingLight.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/CleanvertisingLight/CleanvertisingLight.woff") format("woff"),
+			url("../fonts/CleanvertisingLight/CleanvertisingLight.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}

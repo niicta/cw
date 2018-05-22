@@ -30,7 +30,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Добро пожаловать!</title>
+    <title>Посещения</title>
     <link rel="stylesheet" type="text/css" href="site/css/markup.css">
     <link rel="stylesheet" type="text/css" href="site/css/theme.css">
     <script src="site/script/jquery-3.2.1.js"></script>
@@ -38,10 +38,13 @@
 </head>
 <body>
 <%@include file="header.jsp"%>
+<div class="content-backgroung">
+    <img class="content-backgroung-image" src="site/images/main.jpg">
+</div>
 <div class="content visit-content flex-column">
 
     <div class="visit-block flex-column">
-        <p class="visit-header">Посещения: </p>
+        <p class="visit-header section-name">Посещения: </p>
         <%for (Order order : orders)  {%>
             <p class="visit-template-header">Тариф <%=order.getTemplate().getName()%>: </p>
             <%for (Visit visit : order.getVisits()) {%>
@@ -64,29 +67,30 @@
             <div class="new-visit-button button" id="<%=order.getId()%>">Новое посещение</div>
         </div>
         <%}%>
+    </div>
+</div>
 
-        <p class="visit-template-header">Продвинутый тариф: </p>
 
-        <div class="visit-container flex-row">
-            <div class="visit-date-container flex-column">
-                <p class="visit-date-text"></p>
-            </div>
-            <div class="visit-time-container flex-column">
-                <p class="visit-time-text">11:00-12:00</p>
-            </div>
-            <div class="visit-space-container flex-column">
-                <p class="visit-space-text">Рабочее место №11</p>
-            </div>
-            <div class="delete-visit-button">
-                <img src="site/icons/bin.png" alt="" class="delete-button-icon"/>
+
+
+<div class="error-form-block form-block flex-column ">
+    <div class="error-form form flex-column">
+
+        <div class="error-text-block form-caption flex-row">
+            <p class="error-text-caption">Ошибка</p>
+        </div>
+
+        <div class="parameters-container flex-column">
+            <p class="error-text"></p>
+
+            <div class="buttons-container flex-row">
+                <div class="button submit-error-button">Ок</div>
             </div>
         </div>
 
-
-
     </div>
-
 </div>
+
 
 
 <div class="create-visit-form-block form-block flex-column ">

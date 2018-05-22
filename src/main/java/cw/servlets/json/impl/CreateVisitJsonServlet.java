@@ -52,6 +52,7 @@ public class CreateVisitJsonServlet extends AbstractJsonServlet {
     private void doRequest(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         try {
             LOG.debug("create visit requested");
+            resp.setCharacterEncoding("UTF8");
             resp.setContentType("text/json;Charset=UTF-8");
             fillParametersFromRequest(req);
             ContextMap contextMap = buildCommandContext();
@@ -66,11 +67,11 @@ public class CreateVisitJsonServlet extends AbstractJsonServlet {
 
     private void fillParametersFromRequest(HttpServletRequest req) {
         int startYear = Integer.valueOf(req.getParameter(START_YEAR));
-        int startMonth = Integer.valueOf(req.getParameter(START_MONTH));
+        int startMonth = Integer.valueOf(req.getParameter(START_MONTH)) - 1;
         int startDay = Integer.valueOf(req.getParameter(START_DAY));
         int startHour = Integer.valueOf(req.getParameter(START_HOUR));
         int endYear = Integer.valueOf(req.getParameter(END_YEAR));
-        int endMonth = Integer.valueOf(req.getParameter(END_MONTH));
+        int endMonth = Integer.valueOf(req.getParameter(END_MONTH)) - 1;
         int endDay = Integer.valueOf(req.getParameter(END_DAY));
         int endHour = Integer.valueOf(req.getParameter(END_HOUR));
         startDate = Calendar.getInstance();
@@ -80,6 +81,7 @@ public class CreateVisitJsonServlet extends AbstractJsonServlet {
         startDate.set(Calendar.MONTH, startMonth);
         startDate.set(Calendar.DAY_OF_MONTH, startDay);
         startDate.set(Calendar.HOUR_OF_DAY, startHour);
+        startDate.set(startYear, startMonth, startDay, startHour, 0);
         endDate = Calendar.getInstance();
         endDate.set(Calendar.MINUTE, 0);
         endDate.set(Calendar.SECOND, 0);
@@ -87,6 +89,7 @@ public class CreateVisitJsonServlet extends AbstractJsonServlet {
         endDate.set(Calendar.MONTH, endMonth);
         endDate.set(Calendar.DAY_OF_MONTH, endDay);
         endDate.set(Calendar.HOUR_OF_DAY, endHour);
+        endDate.set(endYear, endMonth, endDay, endHour, 0);
         orderId = Integer.valueOf(req.getParameter(ORDER_ID));
         LOG.debug(String.format("params: start %s end %s order %d", calendarToDateAndHourString(startDate),
                 calendarToDateAndHourString(endDate), orderId));
