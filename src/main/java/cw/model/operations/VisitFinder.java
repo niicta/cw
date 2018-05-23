@@ -62,7 +62,9 @@ public class VisitFinder {
                     debug("visit starts later than free period, return free period - " + freePeriod);
                     return freePeriod;
                 } else {
-                    freePeriod.setStartDate(visit.getEndDate());
+                    if (!TimeOperatons.laterThan(freePeriod.getStartDate(), visit.getEndDate())) {
+                        freePeriod.setStartDate(visit.getEndDate());
+                    }
                 }
             }
             debug("return free period - " + freePeriod);

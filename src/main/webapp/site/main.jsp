@@ -8,8 +8,15 @@
 <%@ page import="cw.model.SpaceType" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 
-<% User user = CDI.current().select(User.class).get(); %>
-<% DAOContainer daoContainer = CDI.current().select(DAOContainer.class).get(); %>
+<%
+    User user = CDI.current().select(User.class).get();
+    if (user == null || user.getUserRole() == null)
+    {
+        response.sendRedirect("index");
+    }
+    DAOContainer daoContainer = CDI.current().select(DAOContainer.class).get();
+%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,9 +67,11 @@
             <div class="submit-button-container">
                 <div class="button submit-template-button" data-template-id="<%=template.getId()%>">Подать заявку</div>
             </div>
+            <% if (user.getUserRole() == UserRole.ADMIN){%>
             <div class="delete-template-button">
                 <img src="site/icons/bin.png" alt="" class="delete-button-icon">
             </div>
+              <%}%>
         </div>
         <%}%>
         <div class="template-container flex-column">

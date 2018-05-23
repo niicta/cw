@@ -7,6 +7,10 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%
     User user = CDI.current().select(User.class).get();
+    if (user == null || user.getUserRole() == null || user.getUserRole() != UserRole.ADMIN)
+    {
+        response.sendRedirect("main");
+    }
     DAOContainer daoContainer = CDI.current().select(DAOContainer.class).get();
     Collection<Space> spaces = daoContainer.getSpaceDao().findAll();
 %>
@@ -40,9 +44,11 @@
 
     <div class="space-container flex-row">
         <p class="space-header">Рабочее место № <%=space.getId()%></p>
-        <div class="delete-space-button">
-            <img src="site/icons/bin.png" alt="" class="delete-button-icon">
-        </div>
+        <% if (user.getUserRole() == UserRole.ADMIN){%>
+            <div class="delete-space-button">
+                <img src="site/icons/bin.png" alt="" class="delete-button-icon">
+            </div>
+        <%}%>
     </div>
 
         <%}%>

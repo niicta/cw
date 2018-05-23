@@ -88,8 +88,9 @@ function showNewVisitForm(orderId){
         });
         $('.submit-create-visit-button').click(function () {
             var visitDay = $('.visit-day').val();
-            var visitMonth = $('.visit-month').val();
-            var visitYear = $('.visit-year').val();
+            var visitMonth = visitDay.substring(5, 7);
+            var visitYear = visitDay.substring(0, 4) ;
+            visitDay = visitDay.substring(8, 10);
             var visitStartHour = $('.visit-start-hour').val();
             var visitEndHour = $('.visit-end-hour').val();
             $.ajax({

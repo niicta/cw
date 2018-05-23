@@ -6,14 +6,20 @@
 <%@ page import="java.util.LinkedList" %>
 <%@ page import="java.util.Calendar" %>
 <%@ page import="cw.model.operations.TimeOperatons" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="cw.model.operations.VisitByStartDateComparator" %>
 <%@ page contentType="text/html;charset=utf-8" %>
 <%
     User user = CDI.current().select(User.class).get();
+    if (user == null || user.getUserRole() == null)
+    {
+        response.sendRedirect("index");
+    }
     DAOContainer daoContainer = CDI.current().select(DAOContainer.class).get();
     DAO<Order> orderDao = daoContainer.getOrderDao();
     Collection<Order> orders = new LinkedList<>();
     if (user != null && user.getUserRole() != null) {
-        if (user.getUserRole().equals(UserRole.ADMIN)) {
+        if (user.getUserRole().equals(UserRole.ADMIN) || user.getUserRole().equals(UserRole.OPERATOR)) {
             orders = orderDao.findAll();
         } else {
             for (Order order : orderDao.findAll()){
@@ -47,7 +53,11 @@
         <p class="visit-header section-name">Посещения: </p>
         <%for (Order order : orders)  {%>
             <p class="visit-template-header">Тариф <%=order.getTemplate().getName()%>: </p>
-            <%for (Visit visit : order.getVisits()) {%>
+            <% Collection<Visit> visits = order.getVisits();
+                ArrayList<Visit> sortedVisits = new ArrayList<>();
+                sortedVisits.addAll(visits);
+                sortedVisits.sort(new VisitByStartDateComparator());
+                for (Visit visit : sortedVisits) {%>
                 <div class="visit-container flex-row">
                     <div class="visit-date-container flex-column">
                         <p class="visit-date-text"><%=TimeOperatons.calendarToDateString(visit.getStartDate())%></p>
@@ -101,20 +111,11 @@
         </div>
 
         <div class="parameters-container flex-column">
-            <div class="date-row flex-row">
                 <div class="visit-day-container flex-row form-input-container">
                     <p class="visit-day-text">День: </p>
-                    <input type="text" class="visit-day text-input"/>
+                    <input type="date" class="visit-day text-input"/>
                 </div>
-                <div class="visit-month-container flex-row form-input-container">
-                    <p class="visit-month-text">Месяц: </p>
-                    <input type="text" class="visit-month text-input"/>
-                </div>
-                <div class="visit-year-container flex-row form-input-container">
-                    <p class="visit-year-text">Год: </p>
-                    <input type="text" class="visit-year text-input"/>
-                </div>
-            </div>
+
 
             <div class="date-row flex-row">
                 <div class="visit-start-hour-container flex-row form-input-container">
