@@ -1,11 +1,14 @@
 package cw.model.impl.generic;
 
+import cw.model.Attribute;
 import cw.model.Order;
 import cw.model.Space;
 import cw.model.Visit;
 
 import javax.persistence.*;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 @Entity
 @NamedQuery(name = "GenericVisit.findAll", query = "SELECT v FROM GenericVisit v")
@@ -21,6 +24,11 @@ public class GenericVisit implements Visit {
     @ManyToOne
     private GenericSpace space;
     private boolean fixed;
+    @ElementCollection
+    @CollectionTable(name="visit_preferences")
+    @MapKeyColumn(name = "attrubute")
+    @Column(name = "value")
+    private Map<GenericAttribute, String> preferences;
 
     public GenericVisit(int id, GenericOrder order, Calendar startDate, Calendar endDate, GenericSpace space, boolean fixed) {
         this.id = id;
@@ -99,6 +107,23 @@ public class GenericVisit implements Visit {
     @Override
     public void setFixed(boolean fixed) {
         this.fixed = fixed;
+    }
+
+    @Override
+    public Map<Attribute, String> getPreferences(){
+        Map<Attribute, String> preferencesToReturn = new HashMap<>();
+        for (GenericAttribute genericAttribute: preferences.keySet()){
+            preferencesToReturn.put(genericAttribute, preferences.get(genericAttribute));
+        }
+        return preferencesToReturn;
+    }
+
+    @Override
+    public void setPreferences(Map<Attribute, String> preferences){
+        this.preferences = new HashMap<>();
+        for (Attribute genericAttribute: preferences.keySet()){
+            this.preferences.put((GenericAttribute) genericAttribute, preferences.get(genericAttribute));
+        }
     }
 
     @Override

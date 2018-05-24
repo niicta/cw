@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Calendar;
+import java.util.Map;
 
 
 public interface Visit {
@@ -18,4 +19,6 @@ public interface Visit {
     void setSpace(Space space);
     boolean isFixed();
     void setFixed(boolean fixed);
+    Map<Attribute, String> getPreferences();
+    void setPreferences(Map<Attribute, String> parameters);
 }

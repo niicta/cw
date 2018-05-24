@@ -1,6 +1,7 @@
 package cw.model.operations;
 
 import cw.data.DAO;
+import cw.model.Attribute;
 import cw.model.Space;
 import cw.model.SpaceType;
 import cw.model.Visit;
@@ -82,16 +83,27 @@ public class SpacesVisitsOptimizer {
     private void optimizeForWorkPlace(Space space, Visit freePeriodOfTime, List<Visit> sortedVisitsForSpace){
         debug("optimize for work place started");
         while (!theSameDateAndHour(freePeriodOfTime.getStartDate(), rightDate)){
+            debug("space - " + space);
+            debug("sortedVisitsForSpace - " + sortedVisitsForSpace);
+            debug("free period of time : " + freePeriodOfTime);
+            List<Visit> possibleVisits = new LinkedList<>();
             for (int i = 0; i < nonCheckedVisits.size(); i++){
-                debug("space - " + space);
-                debug("sortedVisitsForSpace - " + sortedVisitsForSpace);
-                debug("free period of time : " + freePeriodOfTime);
                 Visit visit = nonCheckedVisits.get(i);
                 debug("current visit - " + visit);
                 if (visit.getOrder().getTemplate().getSpaceType().equals(space.getSpaceType())
                         && !visit.isFixed()
                         && canAccommodate(freePeriodOfTime, visit)){
-                    debug("can bind for place - " + true);
+                    if (canRoomSatisfyVisit(space, visit)){
+                        debug("can bind for place - " + true);
+                        possibleVisits.add(visit);
+                    }
+                }
+            }
+            debug("possible visits for space - " + possibleVisits);
+            if (possibleVisits.size() > 0) {
+                Visit visit = selectBestVisitForSpace(space, possibleVisits);
+                debug("best visit for space - " + visit);
+                if (visit != null) {
                     bindVisitAndSpace(visit, space, sortedVisitsForSpace);
                     freePeriodOfTime.setStartDate(visit.getEndDate());
                 }
@@ -125,7 +137,7 @@ public class SpacesVisitsOptimizer {
                 if (visit.getOrder().getTemplate().getSpaceType().equals(space.getSpaceType())
                         && !visit.isFixed()
                         && canAccommodate(freePeriodOfTime, visit)){
-                    if (checkRoomCondition(space, visit)){
+                    if (canRoomSatisfyVisit(space, visit)){
                         debug("can bind for place - " + true);
                         possibleVisits.add(visit);
                     }
@@ -133,7 +145,7 @@ public class SpacesVisitsOptimizer {
             }
             debug("possible visits for space - " + possibleVisits);
             if (possibleVisits.size() > 0) {
-                Visit visit = selectBestVisitForRoom(space, possibleVisits);
+                Visit visit = selectBestVisitForSpace(space, possibleVisits);
                 debug("best visit for space - " + visit);
                 if (visit != null) {
                     bindVisitAndSpace(visit, space, sortedVisitsForSpace);
@@ -147,38 +159,55 @@ public class SpacesVisitsOptimizer {
         debug("optimize for work place ended");
     }
 
-    private Visit selectBestVisitForRoom(Space room, List<Visit> possibleVisits){
-        debug("selectBestVisitForRoom started");
+    private Visit selectBestVisitForSpace(Space space, List<Visit> possibleVisits){
+        debug("selectBestVisitForSpace started");
         debug("possibleVisits " + possibleVisits);
-        debug("room " + room);
+        debug("room " + space);
         Visit previousVisit = possibleVisits.get(0);
-        int delta = room.getCountOfSeats() - previousVisit.getOrder().getTemplate().getCountOfPlaces();
+        int delta = space.getCountOfSeats() - previousVisit.getOrder().getTemplate().getCountOfPlaces();
         debug("previousVisit - " + previousVisit);
         debug("previous delta - " + delta);
         for (int i = 1; i < possibleVisits.size(); i++){
             Visit nextVisit = possibleVisits.get(i);
             debug("next Visit - " + nextVisit);
             if (startsLaterThan(nextVisit, previousVisit)){
-                debug("selectBestVisitForRoom ended, return - " + previousVisit);
+                debug("selectBestVisitForSpace ended, return - " + previousVisit);
                 return previousVisit;
             }
-            else if (delta > room.getCountOfSeats() - nextVisit.getOrder().getTemplate().getCountOfPlaces()
-                    && room.getCountOfSeats() < nextVisit.getSpace().getCountOfSeats()){
+            else if (delta > space.getCountOfSeats() - nextVisit.getOrder().getTemplate().getCountOfPlaces()
+                    && space.getCountOfSeats() < nextVisit.getSpace().getCountOfSeats()){
                 previousVisit = nextVisit;
-                delta = room.getCountOfSeats() - nextVisit.getOrder().getTemplate().getCountOfPlaces();
+                delta = space.getCountOfSeats() - nextVisit.getOrder().getTemplate().getCountOfPlaces();
             }
         }
-        if (room.getCountOfSeats() < previousVisit.getSpace().getCountOfSeats()) {
-            debug("selectBestVisitForRoom ended, return - " + previousVisit);
+        if (space.getCountOfSeats() < previousVisit.getSpace().getCountOfSeats()) {
+            debug("selectBestVisitForSpace ended, return - " + previousVisit);
             return previousVisit;
         }
-        debug("selectBestVisitForRoom ended, return - " + null);
+        debug("selectBestVisitForSpace ended, return - " + null);
         return null;
     }
 
-    private boolean checkRoomCondition(Space space, Visit visit) {
-        return space.getSpaceType().equals(SpaceType.WORK_PLACE) ||
+    private boolean canRoomSatisfyVisit(Space space, Visit visit) {
+        boolean canSatisfy =  space.getSpaceType().equals(SpaceType.WORK_PLACE) ||
                 visit.getOrder().getTemplate().getCountOfPlaces() <= space.getCountOfSeats();
+        if (!canSatisfy){
+            return false;
+        }
+        for (Attribute attribute: visit.getPreferences().keySet()){
+            if (!space.getParameters().containsKey(attribute))
+            {
+                return false;
+            }
+            try
+            {
+                AttributeTypeHandler typeHandler = (AttributeTypeHandler) Class.forName(attribute.getAttributeType().getHandlerClassName()).newInstance();
+
+            } catch (Exception e)
+            {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     private Visit findFreePeriod(Calendar currentLeftDate, Collection<Visit> sortedVisitsForSpace) {
